@@ -1,0 +1,108 @@
+
+<header class="header container">
+  <nav class="header-title">
+    <a href="~/src/index.html" class="title-link">
+      <svg class="header-icon">
+        <use href="~/src/img/logo-light-theme.svg"></use>
+      </svg>
+      <span class="header-logo-name">Bookshelf</span>
+    </a>
+    <ul class="header-nav">
+      <li><a href="~/src/index.html" class="header-link-home">Home</a></li>
+      <li>
+        <div class="header-shopping-list-wrapper">
+          <a
+            href="~/src/markup/shopping-list/shopping-list.html"
+            class="header-shopping-link"
+          >
+            <span class="header-shopping">Shopping list</span>
+            <svg class="shopping-icon">
+              <use href="~/src/img/icons.svg#shop-list-icon"></use>
+            </svg>
+            <p class="counter-value"></p>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <div class="theme-switch">
+    <input type="checkbox" class="js-theme-switch" id="toggle-theme" />
+    <label for="toggle-theme" class="toggle"></label>
+  </div>
+  <div class="auth-menu-root"></div>
+  <button class="menu-open" type="button">
+    <span>Log in</span>
+    <svg class="menu-open-icon">
+      <use href="~/src/img/icons.svg#icon-align-left"></use>
+    </svg>
+  </button>
+
+  <div class="backdrop-header is-hidden">
+    <div class="mob-menu-wrapper">
+      <div class="mobile-menu">
+        <div class="container book">
+          <div class="mobile-container-header">
+            <nav class="header-title">
+              <a href="~/src/index.html" class="title-link">
+                <svg class="header-icon">
+                  <use href="~/src/img/icons.svg#icon-logo-light-theme"></use>
+                </svg>
+              </a>
+              <ul class="header-nav">
+                <li>
+                  <a href="~/src/index.html" class="header-link-home">Home</a>
+                </li>
+                <li>
+                  <a
+                    href="~/src/markup/shopping-list/shopping-list.html"
+                    class="header-shopping-link"
+                  >
+                    <span class="header-shopping">Shopping list</span>
+                    <svg class="shopping-icon">
+                      <use href="~/src/img/icons.svg#shop-list-icon"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="theme-auth">
+              <div class="theme-switch">
+                <input
+                  type="checkbox"
+                  class="js-theme-switch"
+                  id="mobile-toggle-theme"
+                />
+                <label for="mobile-toggle-theme" class="toggle"></label>
+              </div>
+              <div class="auth-menu-root"></div>
+            </div>
+
+            <button type="button" class="mobile-menu-close-btn">
+              <svg class="mobile-menu-close-btn-icon">
+                <use href="~/src/img/icons.svg#icon-x-close"></use>
+              </svg>
+            </button>
+          </div>
+          <ul class="mobile-header-nav">
+            <li>
+              <a href="~/src/index.html" class="mobile-header-link-home"
+                ><span class="header-shopping current">Home</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="~/src/markup/shopping-list/shopping-list.html"
+                class="mobile-header-shopping-link"
+              >
+                <span class="header-shopping">Shopping list</span>
+                <svg class="shopping-icon">
+                  <use href="~/src/img/icons.svg#shop-list-icon"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

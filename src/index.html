@@ -2,23 +2,40 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" type="image/png" href="./img/images/favicon.png" />
+    <title>Bookshelf</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <load ="partials/header.html" />
+    <header>
+      <include src="./markup/header.html"></include>
+    </header>
+    <main>
+      <div class="container aside-container">
+        <aside class="aside-menu">
+          <include src="./markup/categories-books.html"></include>
+          <include src="./markup/support-ukraine.html"></include>
+        </aside>
+        <div class="main-content">
+          <include src="./markup/best-sellers.html"></include>
+          <include src="./markup/shop-list-di.html"> </include>
+        </div>
+      </div>    
+      
+      
+      <include src="./markup/authorization.html"></include>
+      <include src="./markup/scroll-up-btn.html"></include>
+      <include src="./markup/modal/modal.html"> </include>
+      
+    </main>
+    <footer>
+      <include src="./markup/footer.html"></include>
+    </footer>
 
-    <section>
-      <h1>Lorem ipsum dolor sit amet.</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="./img/javascript.svg" alt="" />
-    </section>
 
-    <!-- Loads the specified .html file -->
-    <load ="partials/vite-promo.html" />
-
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="./js/index.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
   </body>
 </html>

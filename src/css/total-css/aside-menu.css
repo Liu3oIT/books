@@ -1,0 +1,36 @@
+.aside-container {
+    padding-top: 40px;
+}
+@media screen and (min-width: 768px) {
+    .aside-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .aside-container {
+        flex-direction: row
+    }
+}
+
+.aside-menu {
+    display: block;
+    margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+    .aside-menu {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+
+        margin-bottom: 100px;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .aside-menu {
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-right: 40px;
+    }
+}
