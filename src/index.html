@@ -5,37 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="./img/images/favicon.png" />
     <title>Bookshelf</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
+    />
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <header>
-      <include src="./markup/header.html"></include>
+      <load crc="markup/header.html" />
     </header>
     <main>
       <div class="container aside-container">
         <aside class="aside-menu">
-          <include src="./markup/categories-books.html"></include>
-          <include src="./markup/support-ukraine.html"></include>
+          <load crc="markup/categories-books.html" />
+          <load crc="markup/support-ukraine.html" />
         </aside>
         <div class="main-content">
-          <include src="./markup/best-sellers.html"></include>
-          <include src="./markup/shop-list-di.html"> </include>
+          <load crc="markup/best-sellers.html" />
+          <load crc="markup/shop-list-di.html" />
         </div>
-      </div>    
-      
-      
-      <include src="./markup/authorization.html"></include>
-      <include src="./markup/scroll-up-btn.html"></include>
-      <include src="./markup/modal/modal.html"> </include>
-      
+      </div>
+
+      <load crc="markup/authorization.html" />
+      <load crc="markup/scroll-up-btn.html" />
+      <load crc="markup/modal/modal.html" />
     </main>
     <footer>
-      <include src="./markup/footer.html"></include>
+      <load crc="/markup/footer.html" />
     </footer>
 
-
-    <script type="module" src="./js/index.js"></script> 
+    <script type="module" src="/js/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
   </body>
 </html>

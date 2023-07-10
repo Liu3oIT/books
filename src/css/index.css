@@ -1,14 +1,14 @@
-@import url('../css/total-css/header.css');
-@import url('../css/total-css/footer.css');
-@import url('../css/total-css/scroll-up-btn.css');
-@import url('../css/total-css/modal.css');
-@import url('../css/total-css/loader.css');
-@import url('../css/total-css/fonts.css');
-@import url('../css/total-css/support-ukraine.css');
-@import url('../css/total-css/category-books.css');
-@import url('../css/total-css/best-sellers.css');
-@import url('../css/total-css/shop-list-di.css');
-@import url('../css/total-css/aside-menu.css');
+@import url('../../src/css/total-css/header.css');
+@import url('../../src/css/total-css/footer.css');
+@import url('../../src/css/total-css/scroll-up-btn.css');
+@import url('../../src/css/total-css/modal.css');
+@import url('../../src/css/total-css/loader.css');
+@import url('../../src/css/total-css/fonts.css');
+@import url('../../src/css/total-css/support-ukraine.css');
+@import url('../../src/css/total-css/category-books.css');
+@import url('../../src/css/total-css/best-sellers.css');
+@import url('../../src/css/total-css/shop-list-di.css');
+@import url('../../src/css/total-css/aside-menu.css');
 
 :root {
   --body-background-color: #f6f6f6;

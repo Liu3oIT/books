@@ -1,165 +1,168 @@
 .support-ukraine {
-    width: 335px;
-    height: 352px;
+  width: 335px;
+  height: 352px;
 }
 
 @media screen and (min-width: 768px) {
-    .support-ukraine {
-        width: 335px;
-        height: 472px;
-    }
+  .support-ukraine {
+    width: 335px;
+    height: 472px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-    .support-ukraine {
-        width: 356px;
-        height: 490px;
-    }
+  .support-ukraine {
+    width: 356px;
+    height: 490px;
+  }
 }
 
 .support {
-    border-radius: 16px;
-    background: radial-gradient(183.6% 183.01% at 59.76% -23.42%, #4f2ee8 18.03%, #fff 100%);
-    padding: 24px 40px 20px 40px;
-    text-align: center;
-    font-size: 18px;
-    color: var(--body-secondary-color);
-    
+  border-radius: 16px;
+  background: radial-gradient(
+    183.6% 183.01% at 59.76% -23.42%,
+    #4f2ee8 18.03%,
+    #fff 100%
+  );
+  padding: 24px 40px 20px 40px;
+  text-align: center;
+  font-size: 18px;
+  color: var(--body-secondary-color);
 }
 
 @media screen and (min-width: 768px) {
-    .support {
-        padding-bottom: 14px;
-    }
+  .support {
+    padding-bottom: 14px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-    .support {
-        padding-bottom: 24px;
-        /* max-width: 356px; */
-    }
+  .support {
+    padding-bottom: 24px;
+    /* max-width: 356px; */
+  }
 
-    .support-down-btn {
-        width: 38px;
-        height: 38px;
-        margin-top: 40px;
-    }
+  .support-down-btn {
+    width: 38px;
+    height: 38px;
+    margin-top: 40px;
+  }
 }
 
 .support-list {
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-    list-style-type: none;
-    counter-reset: li;
-    padding: 0;
-    margin: 0;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  list-style-type: none;
+  counter-reset: li;
+  padding: 0;
+  margin: 0;
 }
 
 li.support-item {
-    display: flex;
-    align-items: center;
-    height: 32px;
+  display: flex;
+  align-items: center;
+  height: 32px;
 }
 
 li.support-item:before {
-    counter-increment: li;
-    content: counter(li, decimal-leading-zero);
-    color: var(--body-secondary-color);
-    margin-right: 16px;
-    align-self: center;
+  counter-increment: li;
+  content: counter(li, decimal-leading-zero);
+  color: var(--body-secondary-color);
+  margin-right: 16px;
+  align-self: center;
 }
 
 .support-header {
-    color: var(--body-secondary-color);
-    letter-spacing: -.04em;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 1.2;
-    display: flex;
-    margin: 0 0 40px 0;
+  color: var(--body-secondary-color);
+  letter-spacing: -0.04em;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  display: flex;
+  margin: 0 0 40px 0;
 }
 
 .support-header::after {
-    content: url('/src/img/images/support-ukraine/support-ukraine-icon.svg');
-    width: 20px;
-    height: 20px;
-    margin-left: 12px;
+  content: url('/src/img/images/support-ukraine/support-ukraine-icon.svg');
+  width: 20px;
+  height: 20px;
+  margin-left: 12px;
 }
 
 .support-img {
-    fill: var(--body-secondary-color);
-    filter: brightness(0) invert();
+  fill: var(--body-secondary-color);
+  filter: brightness(0) invert();
 }
 
 .support-down-btn {
-    position: relative;
-    padding: 5px;
-    margin: 0px auto;
-    background: var(--body-secondary-color);
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
-    transition: all 0.2s linear;
-    border: none;
-    position: relative;
-    margin-top: 16px;
+  position: relative;
+  padding: 5px;
+  margin: 0px auto;
+  background: var(--body-secondary-color);
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  transition: all 0.2s linear;
+  border: none;
+  position: relative;
+  margin-top: 16px;
 }
 
 @media screen and (min-width: 768px) {
-    .support-down-btn {
-        margin-top: 32px;
-    }
+  .support-down-btn {
+    margin-top: 32px;
+  }
 }
 
 @media screen and (min-width: 768px) {
-    .support-container {
-        height: 292px;
-    }
+  .support-container {
+    height: 292px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-    .support-container {
-        height: 292px;
-    }
+  .support-container {
+    height: 292px;
+  }
 }
 
 .support-down-btn:hover {
-    transform: translate3d(0, 3px, 0);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.274);
+  transform: translate3d(0, 3px, 0);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.274);
 }
 
 .support-down-btn::after {
-    content: url('/src/img/images/support-ukraine/support-ukraine-down-btn.svg');
-    fill: var(--text-fourth-color);
+  content: url('/src/img/images/support-ukraine/support-ukraine-down-btn.svg');
+  fill: var(--text-fourth-color);
 }
 
 #tns1-mw {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .tns-visually-hidden {
-    display: none;
+  display: none;
 }
 
 .support-container {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 767.8px) {
-    .support-container {
-        height: 188px;
-    }
+  .support-container {
+    height: 188px;
+  }
 }
 
 @media screen and (max-width: 1439.8px) {
-    .shopping-aside {
-        display: none;
-    }
+  .shopping-aside {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-    .support {
-        max-height: 490px;
-    }
+  .support {
+    max-height: 490px;
+  }
 }
