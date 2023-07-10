@@ -1,18 +1,50 @@
 .category-books {
   display: flex;
+  max-height: 258px;
+  
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-color: var(--scroll-category-color)transparent;
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .category-books {
+    width: 337px;
+    max-height: 472px;
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .category-books {
+    width: 356px;
+    margin-bottom: 86px;
+  }
 }
 
 .list-category-books {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  font-size: 18px;
-  line-height: 1.3;
+  gap: 24px;
+  font-size: 16px;
+  line-height: 1.2;
   letter-spacing: -0.02em;
   color: var(--text-secondary-color);
   opacity: 60%;
   list-style: none;
   cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .list-category-books {
+    gap: 32px;
+    font-size: 18px;
+    line-height: 1.3;
+  }
 }
 
 .list-category-books li:hover {
@@ -21,4 +53,10 @@
 
 .all-category {
   text-transform: uppercase;
+  color: var(--text-fourth-color);
+  font-weight: 700;
+  
+}
+.list-category-books .all-category {
+opacity: 100%;
 }
