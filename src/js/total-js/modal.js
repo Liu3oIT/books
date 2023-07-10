@@ -5,7 +5,7 @@ import bookshop from '../../img/book-shop.svg';
 const backDrop = document.querySelector('#book-modal');
 const bestSellerRef = document.querySelector('.books-container');
 const categoriesRef = document.querySelector('.category-books-list');
-const closeBtn = document.querySelector('.modal__close-btn');
+const closeBtn = document.querySelector('.close-button');
 const modalContent = document.querySelector('.modal__content');
 
 closeBtn.addEventListener('click', onBtnCloseClick);
@@ -19,7 +19,6 @@ function fetchCategory(id) {
 
 function renderTargetCategory(id) {
   const markup = `
-    
       <div class="modal__img-container">
         <img src="${id.book_image}" alt="${id.title}" class="modal__img">
       </div>
