@@ -1,7 +1,6 @@
 import supportUkraineList from '../total-js/support-ukraine-list';
 
 const supportUkraineListEl = document.querySelector('.support-list');
-console.log(supportUkraineListEl);
 const downBtn = document.querySelector('.support-down-btn');
 
 renderCharityBar(supportUkraineList);
