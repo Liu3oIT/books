@@ -5,39 +5,232 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKtSURBVHgB7ZlBbtNAFED/nxiUIrUyG0QkJMweUnOCpnsQ5gR1T0BvUOcGcIP0BDhcgHADEzbsGlaBbLDYtCV4Pv+HpIqSloxjx87CT4qijCc/z+MZe/4PQEVFRW54zR+nq/oo2BJEloCCVf22QthUVihdOI2sUKpwWlmhNOHXzdFRWlmhFGGR1aA7sAbWTY2ec24nu3UPAff5ZQOQAwgOH4qB+MXvhPRZk46ssYrCr40BFCAr4Lyk3rv3Bola3NqCdESa6F1tDL3/yZvIdvsPcf7zy2dDfz4uXosCnPBI2pAVwg6OdXtR3HRkF4VfNb/TfFyLdnfeI/Co5gWST3fRh7mrJ2igt5AFiXsHHevWy4/0jQh6CjBKFMU1gIE0JwAOapnP6LLRPjc5YEQOV49dreU2aoNKwjB6FBmEAM8duVonJ7w4j6AAloTDfiOAFITRAzkxn+daIcJbs/kxpRLeNJXwpqmEMzJY1WGbhAeo6HBVp20RjlBdPA+j1dvU0oU56/jEsodh9CQ26W9BibDs2Yd+w0/zndJGmGXbaWWFUoSnsgGsQeHCWWSFQucw54vH3S+NDmSgsBEW2TCjrFCYcB6ywsopIVk11Ov2b5XYStVs6w8/Pi8v43Bgdt/MOy5ep9Gzhl8X95O9HV8RHHCC58LtSeaAV1DE2XBX6gacKZ/PH1xM1yfFmRziLgnnxUz4xdNhq4Z4ukZx5kY2dpfIW3SGuTDXKSbvhI9NutcUfjTplzYuC2O8XOTAmCA548XQ45pNtLiL8lxeMFDnegT4XI84AONiSva46DWHAQFO/gyRnZNSEHCgHqTAc4ct/pFg+iNL5BVXnpL478BIVu2sKLI2HlcaCScn70ybZFN+nFZ0KS6L8ySLxQ8hZzz3p631VSDlP6WuAtN9ril/AXVhUR4VmwdlAAAAAElFTkSuQmCC" />
     <title>Bookshelf</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
+    />
     
-    <script type="module" crossorigin src="/books/assets/index-08c50345.js"></script>
+    <script type="module" crossorigin src="/books/assets/index-ba9360ca.js"></script>
     <link rel="stylesheet" href="/books/assets/index-ee8c0c63.css">
   </head>
   <body>
     <header>
-      <include src="./markup/header.html"></include>
+      <header class="header container">
+  <nav class="header-title">
+    <a href="~/src/index.html" class="title-link">
+      <svg class="header-icon">
+        <use href="~/src/img/logo-light-theme.svg"></use>
+      </svg>
+      <span class="header-logo-name">Bookshelf</span>
+    </a>
+    <ul class="header-nav">
+      <li><a href="~/src/index.html" class="header-link-home">Home</a></li>
+      <li>
+        <div class="header-shopping-list-wrapper">
+          <a
+            href="~/src/markup/shopping-list/shopping-list.html"
+            class="header-shopping-link"
+          >
+            <span class="header-shopping">Shopping list</span>
+            <svg class="shopping-icon">
+              <use href="~/src/img/icons.svg#shop-list-icon"></use>
+            </svg>
+            <p class="counter-value"></p>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <div class="theme-switch">
+    <input type="checkbox" class="js-theme-switch" id="toggle-theme" />
+    <label for="toggle-theme" class="toggle"></label>
+  </div>
+  <div class="auth-menu-root"></div>
+  <button class="menu-open" type="button">
+    <span>Log in</span>
+    <svg class="menu-open-icon">
+      <use href="~/src/img/icons.svg#icon-align-left"></use>
+    </svg>
+  </button>
+
+  <div class="backdrop-header is-hidden">
+    <div class="mob-menu-wrapper">
+      <div class="mobile-menu">
+        <div class="container book">
+          <div class="mobile-container-header">
+            <nav class="header-title">
+              <a href="~/src/index.html" class="title-link">
+                <svg class="header-icon">
+                  <use href="~/src/img/icons.svg#icon-logo-light-theme"></use>
+                </svg>
+              </a>
+              <ul class="header-nav">
+                <li>
+                  <a href="~/src/index.html" class="header-link-home">Home</a>
+                </li>
+                <li>
+                  <a
+                    href="~/src/markup/shopping-list/shopping-list.html"
+                    class="header-shopping-link"
+                  >
+                    <span class="header-shopping">Shopping list</span>
+                    <svg class="shopping-icon">
+                      <use href="~/src/img/icons.svg#shop-list-icon"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="theme-auth">
+              <div class="theme-switch">
+                <input
+                  type="checkbox"
+                  class="js-theme-switch"
+                  id="mobile-toggle-theme"
+                />
+                <label for="mobile-toggle-theme" class="toggle"></label>
+              </div>
+              <div class="auth-menu-root"></div>
+            </div>
+
+            <button type="button" class="mobile-menu-close-btn">
+              <svg class="mobile-menu-close-btn-icon">
+                <use href="~/src/img/icons.svg#icon-x-close"></use>
+              </svg>
+            </button>
+          </div>
+          <ul class="mobile-header-nav">
+            <li>
+              <a href="~/src/index.html" class="mobile-header-link-home"
+                ><span class="header-shopping current">Home</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="~/src/markup/shopping-list/shopping-list.html"
+                class="mobile-header-shopping-link"
+              >
+                <span class="header-shopping">Shopping list</span>
+                <svg class="shopping-icon">
+                  <use href="~/src/img/icons.svg#shop-list-icon"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
     </header>
     <main>
       <div class="container aside-container">
         <aside class="aside-menu">
-          <include src="./markup/categories-books.html"></include>
-          <include src="./markup/support-ukraine.html"></include>
+          <section class="category-books">
+  <ul class="list-category-books">
+    <li class="all-category">All categories</li>
+  </ul>
+</section>
+
+          <section class="support-ukraine">
+  <div class="support">
+    <h3 class="support-header">Support Ukraine</h3>
+    <div class="support-container">
+      <ol class="support-list my-slider"></ol>
+    </div>
+    <button class="support-down-btn"></button>
+  </div>
+</section>
+
         </aside>
         <div class="main-content">
-          <include src="./markup/best-sellers.html"></include>
-          <include src="./markup/shop-list-di.html"> </include>
+          <h1 class="my_title">Best Sellers <span class="my_title_books">Books</span></h1>
+
+<div>
+  <ul class="books-container"></ul>
+</div>
+
+          <section class="shopping-list container">
+  <!-- спісок з локал-сторідж -->
+
+  <ul></ul>
+
+  <!-- дефолтний вигляд -->
+
+  <div class="shop-div">
+    <h1 class="shop-title">Shopping <span class="sub-title">List</span></h1>
+
+    <div class="shop-background js-shop-background">
+      <p class="shop-text-backgr">
+        This page is empty, add some books and proceed to order.
+      </p>
+
+      <div class="shop-img-backgr">
+        <img
+          srcset="/books/assets/shoplist-tabl@1x-8a16ad0f.png 1x, /books/assets/shoplist-tabl@2x-2cd61768.png 2x"
+          src="/books/assets/shoplist-tabl@1x-8a16ad0f.png"
+          alt="stack of books"
+        />
+      </div>
+    </div>
+
+    <ul class="shop-list-books js-shop-list"></ul>
+  </div>
+
+  <!-- <li>
+          <h2 class= "title-categonry-name">${e.listName}</h2>
+          <div>
+          <a href="#">
+          <div>
+              <img src="${e.bookImage}" alt="">
+              <div class= "info-books'>
+              <h3 class= "title-books">${e.titleBooks}</h3>
+              <p class= "name-author">${e.author}</p>
+              </div>
+              </a>
+           </div>
+        </li>`-->
+</section>
+
         </div>
-      </div>    
+      </div>
+
       
-      
-      <include src="./markup/authorization.html"></include>
-      <include src="./markup/scroll-up-btn.html"></include>
-      <include src="./markup/modal/modal.html"> </include>
-      
+      <div id="scroll-top" class="js-scroll-up js-scroll-up_hidden">
+  <svg class="scroll-up-btn-icon" width="56" height="56">
+    <use href="/books/assets/icons-60b0c250.svg#scroll-up-btn"></use>
+  </svg>
+</div>
+
+      <div class="backdrop is-hidden" id="book-modal">
+  <div class="modal an-book-info-modal">
+    <button class="modal__close-btn">
+      <svg class="modal__close-img" width="14" height="14">
+        <use href="/src/img/icons.svg#icon-x-close"></use>
+      </svg>
+    </button>
+    <div class="modal__content"></div>
+
+    <button class="modal__add-book-btn">
+      <span class="modal__add-notification">Add to shopping list</span>
+      <span class="modal__remove-notification hidden"
+        >Remove from the shopping list</span
+      >
+    </button>
+    <p class="modal__notification hidden">
+      Congratulations! You have added the book to the shopping list. To delete,
+      press the button "Remove from the shopping list".
+    </p>
+  </div>
+</div>
+
     </main>
     <footer>
-      <include src="./markup/footer.html"></include>
+      
     </footer>
 
-
-     
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
   </body>
 </html>
