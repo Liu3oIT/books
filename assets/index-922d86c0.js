@@ -33,8 +33,7 @@ Notiflix needs to be appended to the "<`+r+'>" element, but you called it before
         </div>
         <button class="books-btn" type="button">see more</button>
       </div>
-    `;e.insertAdjacentHTML("beforeend",i)})}async function Zi(){try{const t=await Pe.fetchCategoryBooks();Vi(t)}catch(t){console.warn(t)}}async function _i(){try{const t=await Pe.fetchTopFiveBooks();Gi(t)}catch(t){console.warn(t)}}Zi();_i();const $i="/books/assets/amazon-7a3d88a6.svg",to="/books/assets/book-apple-6ec5dab2.svg",eo="/books/assets/book-shop-595ed607.svg",at=document.querySelector("#book-modal"),no=document.querySelector(".books-container");document.querySelector(".category-books-list");const io=document.querySelector(".modal__close-btn"),we=document.querySelector(".modal__content");io.addEventListener("click",ut);no.addEventListener("click",so);function oo(t){return fetch(`https://books-backend.p.goit.global/books/${t}`).then(e=>e.json())}function ao(t){const e=`
-    
+    `;e.insertAdjacentHTML("beforeend",i)})}async function Zi(){try{const t=await Pe.fetchCategoryBooks();Vi(t)}catch(t){console.warn(t)}}async function _i(){try{const t=await Pe.fetchTopFiveBooks();Gi(t)}catch(t){console.warn(t)}}Zi();_i();const $i="/books/assets/amazon-7a3d88a6.svg",to="/books/assets/book-apple-6ec5dab2.svg",eo="/books/assets/book-shop-595ed607.svg",at=document.querySelector("#book-modal"),no=document.querySelector(".books-container");document.querySelector(".category-books-list");const io=document.querySelector(".close-button"),we=document.querySelector(".modal__content");io.addEventListener("click",ut);no.addEventListener("click",so);function oo(t){return fetch(`https://books-backend.p.goit.global/books/${t}`).then(e=>e.json())}function ao(t){const e=`
       <div class="modal__img-container">
         <img src="${t.book_image}" alt="${t.title}" class="modal__img">
       </div>
