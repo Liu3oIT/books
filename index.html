@@ -2,84 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/books/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKtSURBVHgB7ZlBbtNAFED/nxiUIrUyG0QkJMweUnOCpnsQ5gR1T0BvUOcGcIP0BDhcgHADEzbsGlaBbLDYtCV4Pv+HpIqSloxjx87CT4qijCc/z+MZe/4PQEVFRW54zR+nq/oo2BJEloCCVf22QthUVihdOI2sUKpwWlmhNOHXzdFRWlmhFGGR1aA7sAbWTY2ec24nu3UPAff5ZQOQAwgOH4qB+MXvhPRZk46ssYrCr40BFCAr4Lyk3rv3Bola3NqCdESa6F1tDL3/yZvIdvsPcf7zy2dDfz4uXosCnPBI2pAVwg6OdXtR3HRkF4VfNb/TfFyLdnfeI/Co5gWST3fRh7mrJ2igt5AFiXsHHevWy4/0jQh6CjBKFMU1gIE0JwAOapnP6LLRPjc5YEQOV49dreU2aoNKwjB6FBmEAM8duVonJ7w4j6AAloTDfiOAFITRAzkxn+daIcJbs/kxpRLeNJXwpqmEMzJY1WGbhAeo6HBVp20RjlBdPA+j1dvU0oU56/jEsodh9CQ26W9BibDs2Yd+w0/zndJGmGXbaWWFUoSnsgGsQeHCWWSFQucw54vH3S+NDmSgsBEW2TCjrFCYcB6ywsopIVk11Ov2b5XYStVs6w8/Pi8v43Bgdt/MOy5ep9Gzhl8X95O9HV8RHHCC58LtSeaAV1DE2XBX6gacKZ/PH1xM1yfFmRziLgnnxUz4xdNhq4Z4ukZx5kY2dpfIW3SGuTDXKSbvhI9NutcUfjTplzYuC2O8XOTAmCA548XQ45pNtLiL8lxeMFDnegT4XI84AONiSva46DWHAQFO/gyRnZNSEHCgHqTAc4ct/pFg+iNL5BVXnpL478BIVu2sKLI2HlcaCScn70ybZFN+nFZ0KS6L8ySLxQ8hZzz3p631VSDlP6WuAtN9ril/AXVhUR4VmwdlAAAAAElFTkSuQmCC" />
+    <title>Bookshelf</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css" />
     
-    <script type="module" crossorigin src="/books/assets/index-c45ada6b.js"></script>
-    <link rel="stylesheet" href="/books/assets/index-10c40100.css">
+    <script type="module" crossorigin src="/books/assets/index-08c50345.js"></script>
+    <link rel="stylesheet" href="/books/assets/index-ee8c0c63.css">
   </head>
   <body>
-    <header class="header">
-  <nav class="nav">
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a href="./page-2.html" class="nav-link">Page 2</a>
-      </li>
-
-      <li class="nav-item">
-        <a href="./page-3.html" class="nav-link">Page 3</a>
-      </li>
-    </ul>
-  </nav>
-</header>
-
-
-    <section>
-      <h1>Lorem ipsum dolor sit amet.</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="/books/assets/javascript-8dac5379.svg" alt="" />
-    </section>
-
-    <!-- Loads the specified .html file -->
-    <section class="vite-promo">
-  <div class="container">
-    <div class="wrapper">
-      <h2 class="title">
-        <span class="gradient">Vite</span>
-      </h2>
-      <p class="text">Next Generation Frontend Tooling</p>
-      <p class="tagline">
-        Get ready for a development environment that can finally catch up with
-        you.
-      </p>
-
-      <ul class="actions">
-        <li class="action">
-          <a
-            class="link"
-            href="https://vitejs.dev/guide/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Get Started</a
-          >
-        </li>
-        <li class="action">
-          <a
-            class="link"
-            href="https://github.com/vitejs/vite"
-            target="_blank"
-            rel="noopener noreferrer"
-            >View on GitHub</a
-          >
-        </li>
-      </ul>
-    </div>
-
-    <div class="thumb">
-      <!-- Path to images as from index.html file -->
-      <img
-        class="pic"
-        src="/books/assets/vite-logo-51249ca9.png"
-        alt="Vite logo"
-        width="640"
-        height="640"
-      />
-    </div>
-  </div>
-</section>
+    <header>
+      <include src="./markup/header.html"></include>
+    </header>
+    <main>
+      <div class="container aside-container">
+        <aside class="aside-menu">
+          <include src="./markup/categories-books.html"></include>
+          <include src="./markup/support-ukraine.html"></include>
+        </aside>
+        <div class="main-content">
+          <include src="./markup/best-sellers.html"></include>
+          <include src="./markup/shop-list-di.html"> </include>
+        </div>
+      </div>    
+      
+      
+      <include src="./markup/authorization.html"></include>
+      <include src="./markup/scroll-up-btn.html"></include>
+      <include src="./markup/modal/modal.html"> </include>
+      
+    </main>
+    <footer>
+      <include src="./markup/footer.html"></include>
+    </footer>
 
 
-    
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
   </body>
 </html>
