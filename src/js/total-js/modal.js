@@ -2,23 +2,18 @@ import amazon from '../../img/amazon.svg';
 import applebook from '../../img/book-apple.svg';
 import bookshop from '../../img/book-shop.svg';
 
-
-
 const backDrop = document.querySelector('#book-modal');
 const bestSellerRef = document.querySelector('.books-container');
 const categoriesRef = document.querySelector('.category-books-list');
 const closeBtn = document.querySelector('.modal__close-btn');
 const modalContent = document.querySelector('.modal__content');
 
-
-
 closeBtn.addEventListener('click', onBtnCloseClick);
 bestSellerRef.addEventListener('click', onCardClick);
 
-
 function fetchCategory(id) {
   return fetch(`https://books-backend.p.goit.global/books/${id}`).then(res =>
-  res.json()
+    res.json()
   );
 }
 
@@ -53,42 +48,32 @@ function getCategory(id) {
 }
 
 function onBtnCloseClick(e) {
- 
-if(e.code === "Escape"){
-  backDrop.removeEventListener('keydown', onBtnCloseClick);
-  backDrop.classList.add('is-hidden');
-}
-if(e.currentTarget === e.target){
-  backDrop.classList.add('is-hidden');
-}
-if(e.target.classList.contains('modal__close-img')){
+  if (e.code === 'Escape') {
+    backDrop.removeEventListener('keydown', onBtnCloseClick);
     backDrop.classList.add('is-hidden');
+  }
+  if (e.currentTarget === e.target) {
+    backDrop.classList.add('is-hidden');
+  }
+  if (e.target.classList.contains('modal__close-img')) {
+    backDrop.classList.add('is-hidden');
+  }
 }
-
-}
-
 
 function onCardClick(e) {
   const card = e.target;
   const el = card.closest('[data-id]');
   const id = el.dataset.id;
-  console.log(card)
-  console.log(el)
-  console.log(id)
-  window.addEventListener('keydown', onBtnCloseClick)
-  backDrop.addEventListener('click', onBtnCloseClick)
-  backDrop.addEventListener('keydown', onBtnCloseClick)
 
+  window.addEventListener('keydown', onBtnCloseClick);
+  backDrop.addEventListener('click', onBtnCloseClick);
+  backDrop.addEventListener('keydown', onBtnCloseClick);
 
-  
-  if(card.classList.contains('books-btn')){
-    return
+  if (card.classList.contains('books-btn')) {
+    return;
   }
-  
-  idToLocaleStorege = id;
+
   getCategory(id);
- 
-backDrop.classList.remove('is-hidden');
 
-
+  backDrop.classList.remove('is-hidden');
 }
