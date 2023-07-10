@@ -1,4 +1,4 @@
-import supportUkraineList from './support-ukraine-list';
+import supportUkraineList from '../total-js/support-ukraine-list';
 
 const supportUkraineListEl = document.querySelector('.support-list');
 const downBtn = document.querySelector('.support-down-btn');
