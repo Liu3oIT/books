@@ -1,6 +1,7 @@
-
 const shopDiv = document.querySelector('.shop-background');
+const btn = document.querySelector('.modal__add-book-btn');
 
+console.log(btn);
 
 const infoBooks = [];
 localStorage.setItem('infoBooks', JSON.stringify(infoBooks));
@@ -8,58 +9,62 @@ localStorage.setItem('infoBooks', JSON.stringify(infoBooks));
 
 
 
-const test = {
-  author:'dima',
-  book_image:'bla-bla-bla.ua',
-  title:'dream team',
-  list_name:'fantastika',
-  description:'there will be a lot of text for the book description field test…',
-};
 
-const куіе = {
-  author:'dima',
-  book_image:'bla-bla-bla.ua',
-  title:'dream team',
-  list_name:'fantastika',
-  description:'there will be a lot of text for the book description field test…',
-};
-
-
+btn.addEventListener('click', e => {
+  e.preventDefault();
+  const parentDiv = e.target.closest('.modal__add-book-btn');
+  if (parentDiv) {
+    const dataId = parentDiv.dataset.id;
+    console.log(dataId);
+  }
+});
 
 
 
 
 function saveLokalStor(info) {
+  const infoBooksString = localStorage.getItem('infoBooks');
+  const infoBooks = JSON.parse(infoBooksString) || [];
 
-   const infoBooksString = localStorage.getItem('infoBooks');
-   const infoBooks = JSON.parse(infoBooksString) || [];
+  infoBooks.push(info);
 
-   infoBooks.push(info);
-
-   localStorage.setItem('infoBooks', JSON.stringify(infoBooks));
-    
+  localStorage.setItem('infoBooks', JSON.stringify(infoBooks));
 }
 
-saveLokalStor(test);
-saveLokalStor(test);
-
-
-// ховае блок через додавання класу
-//  shopDiv.classList.add('displNan');
-
-
-
-
-function drawingMarkings() {
+function checkingLocalStorage() {
   const infoBooksString = localStorage.getItem('infoBooks');
   const infoBooks = JSON.parse(infoBooksString);
 
   if (!infoBooks || infoBooks.length === 0) {
-    console.log('Пусто');
+    shopDiv.classList.remove('displNan');
+    return;
   } else {
-    console.log(infoBooks);
+    shopDiv.classList.add('displNan');
+
+    drawingMarkings(infoBooks);
   }
 }
 
+function drawingMarkings(infoBooks) {
+  const result = infoBooks
+    .map(book => {
+      return `
+      <li>
+        <div data-id="${book._id}">
+          <div class="card-book">
+            <img class="books-card-img" src="${book.book_image}" alt="${book.title}" width="180" height="256" loading="lazy">
+          </div>
+          <div class="info-books">
+            <h3 class="title-books">${book.title}</h3>
+            <p class="name-author">${book.author}</p>
+          </div>
+        </div>
+      </li>
+    `;
+    })
+    .join('');
 
-drawingMarkings();
+  return result;
+}
+
+checkingLocalStorage();
