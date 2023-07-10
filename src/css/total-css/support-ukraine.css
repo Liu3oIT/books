@@ -84,7 +84,7 @@ li.support-item:before {
 }
 
 .support-header::after {
-  content: url('/src/img/images/support-ukraine/support-ukraine-icon.svg');
+  content: url('../../../src/img/images/support-ukraine/support-ukraine-icon.svg');
   width: 20px;
   height: 20px;
   margin-left: 12px;
@@ -133,7 +133,7 @@ li.support-item:before {
 }
 
 .support-down-btn::after {
-  content: url('/src/img/images/support-ukraine/support-ukraine-down-btn.svg');
+  content: url('../../../src/img/images/support-ukraine/support-ukraine-down-btn.svg');
   fill: var(--text-fourth-color);
 }
 
