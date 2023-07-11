@@ -34,7 +34,7 @@
   line-height: 1.2;
   letter-spacing: -0.02em;
   color: var(--text-secondary-color);
-  opacity: 60%;
+  gap: 24px;
   list-style: none;
   cursor: pointer;
 }
@@ -43,14 +43,23 @@
   .list-category-books {
     font-size: 18px;
     line-height: 1.3;
+    gap: 32px;
   }
 }
 
 .list-category-books li:hover {
   color: var(--text-fourth-color);
+  opacity: 100%;
 }
 
-.list-category-books {
+.list__category {
+  opacity: 60%;
+}
+
+.list__category[selected='true'] {
+  text-transform: uppercase;
+  color: var(--text-fourth-color);
+  font-weight: 700;
   opacity: 100%;
 }
 
@@ -67,17 +76,4 @@
   gap: 24px;
   display: flex;
   overflow: hidden;
-}
-.list__category {
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-/* 
-.list__category:hover,
-.list__category:focus {
-  color: var(--text-fourth-color);
-} */
-.list__category[selected='true'] {
-  text-transform: uppercase;
-  color: var(--text-fourth-color);
 }
