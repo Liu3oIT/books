@@ -66,7 +66,7 @@ async function listForCategory() {
 export async function topBooks() {
   try {
     const response = await newApiService.fetchTopFiveBooks();
-    console.log(response);
+
     markupOneCategoryList(response);
   } catch (error) {
     console.warn(error);

@@ -86,18 +86,18 @@ const moreBooksFromCategory = async event => {
   const titleCategory = categoryBooks.dataset.category;
   try {
     const res = await fetchCategory(titleCategory);
-    cssd(res, target);
+    markapForMoreBooks(res, target);
     target.style.display = 'none';
   } catch (error) {
     console.error('Error:', error);
   }
 };
 
-function cssd(res, target) {
-  const startIndex = 5; // Start index from the 5th element
+function markapForMoreBooks(res, target) {
+  const startIndex = 5;
   const extractedItems = res.splice(startIndex);
 
-  const booksContainer = document.createElement('div'); // Create a new div container
+  const booksContainer = document.createElement('div');
   booksContainer.classList.add('new-books');
   extractedItems.forEach(category => {
     const titleCategory = `
