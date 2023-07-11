@@ -29,15 +29,6 @@
         <symbol id="icon-user-fill" viewBox="0 0 32 32">
             <path d="M5.333 29.333c0-2.829 1.124-5.542 3.124-7.543s4.713-3.124 7.542-3.124c2.829 0 5.542 1.124 7.542 3.124s3.124 4.714 3.124 7.543h-21.333zM16 17.333c-4.42 0-8-3.58-8-8s3.58-8 8-8c4.42 0 8 3.58 8 8s-3.58 8-8 8z"></path>
         </symbol>
-        <symbol id="icon-amazon" viewBox="0 0 99 32">
-            <path d="M0 0.8h99.2v30.4h-99.2v-30.4z"></path>
-        </symbol>
-        <symbol id="icon-book-apple" viewBox="0 0 33 32">
-            <path d="M0 0h33v32h-33v-32z"></path>
-        </symbol>
-        <symbol id="icon-book-shop" viewBox="0 0 34 32">
-            <path d="M0 0h33.778v32h-33.778v-32z"></path>
-        </symbol>
         <symbol id="icon-logo-light-theme" viewBox="0 0 32 32">
             <path d="M0 0l16.343 16.171 15.657 15.829v-32h-32z"></path>
             <path d="M4.457 4.229l11.943 11.829 11.257 11.486h-23.2v-23.314z"></path>
