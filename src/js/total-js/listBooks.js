@@ -46,7 +46,9 @@ export function markupOneCategoryList(response) {
             })
             .join('')}
         </ul>
-        <button class="books-btn" type="button">see more</button>
+        <button class="books-btn" type="button" data-category="${
+          category.list_name
+        }">see more</button>
       </div>
     </li>
     `;
