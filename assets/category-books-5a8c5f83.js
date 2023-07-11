@@ -16,13 +16,12 @@ Notiflix needs to be appended to the "<`+r+'>" element, but you called it before
     `;e.insertAdjacentHTML("beforeend",i)})}function no(t){const e=document.querySelector(".books-container");let n=0;t.forEach(i=>{i.books.length!==n&&(n=i.books.length,to.insertAdjacentHTML("beforeend",`<h1 class="my_title">
       Best Sellers <span class="my_title_books">Books</span>
     </h1>`));const o=`
-    <li>
+    <li  class="books-container-item">
       <div class="section-category-for-books">
         <h2 class="title-category-name">${i.list_name}</h2>
-        <div class="section-books">
+        <ul class="section-books">
           ${i.books.map(a=>`
-                
-                  <div data-id="${a._id}">
+                  <li data-id="${a._id}" class="section-books-item">
                     <div class="card-book">
                       <img class="books-card-img" src="${a.book_image}" alt="${a.title}" width="180" height="256" loading="lazy">
                     </div>
@@ -30,13 +29,12 @@ Notiflix needs to be appended to the "<`+r+'>" element, but you called it before
                       <h3 class="title-books">${a.title}</h3>
                       <p class="name-author">${a.author}</p>
                     </div>
-                  </div>
-                
+                  </li>
               `).join("")}
-        </div>
+        </ul>
         <button class="books-btn" type="button">see more</button>
       </div>
-      </li>
+    </li>
     `;e.insertAdjacentHTML("beforeend",o)})}async function io(){try{const t=await Qe.fetchCategoryBooks();eo(t)}catch(t){console.warn(t)}}async function Je(){try{const t=await Qe.fetchTopFiveBooks();console.log(t),no(t)}catch(t){console.warn(t)}}io();Je();const oo="/books/assets/amazon-7a3d88a6.svg",ao="/books/assets/book-apple-6ec5dab2.svg",ro="/books/assets/book-shop-595ed607.svg",at=document.querySelector("#book-modal"),so=document.querySelector(".books-container");document.querySelector(".category-books-list");const lo=document.querySelector(".close-button"),co=document.querySelector(".modal__add-book-btn"),ve=document.querySelector(".modal__remove-notification"),Ae=document.querySelector(".modal__add-notification"),fo=document.querySelector(".modal__notification");let Ne=document.querySelector(".modal__content"),Et=null,rt=[];co.addEventListener("click",ho);lo.addEventListener("click",xt);so.addEventListener("click",yo);function mo(t){return fetch(`https://books-backend.p.goit.global/books/${t}`).then(e=>e.json())}function po(t){const e=`
     <div class="modal__img-container">
       <img src="${t.book_image}" alt="${t.title}" class="modal__img">
