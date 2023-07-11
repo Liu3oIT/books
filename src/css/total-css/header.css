@@ -5,12 +5,14 @@
 
 .header-container {
   display: flex;
+  justify-content: center;
   padding-top: 14px;
   padding-bottom: 13px;
   border: 1.5px solid var(--text-secondary-color);
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   position: sticky;
+  z-index: 1000;
 }
 
 .authorisation-btn-desktop.is-hidden-btn {
@@ -19,7 +21,6 @@
 
 .logo {
   display: flex;
-  align-items: center;
 }
 
 .logo-link {
@@ -62,10 +63,9 @@
   cursor: pointer;
   font-weight: 500;
   font-size: 14px;
+  line-height: 1.28;
   color: var(--text-secondary-color);
-  line-height: calc(18 / 14);
   text-transform: uppercase;
-  height: 36px;
 }
 
 .list-btn {
@@ -79,19 +79,25 @@
   margin-bottom: 0px;
   border: none;
   cursor: pointer;
+  color: var(--text-secondary-color);
   font-weight: 500;
   font-size: 14px;
-  line-height: calc(18 / 14);
+  line-height: 1.28;
   text-transform: uppercase;
 }
 
 .list-btn-svg {
+  position: relative;
+  top: 3px;
   margin-left: 4px;
+  width: 20px;
 }
-
-.list-btn-svg:hover,
-.list-btn-svg:focus {
-  fill: white;
+.home-btn:hover,
+.home-btn:focus,
+.list-btn:hover,
+.list-btn:focus {
+  border: 1.5px solid var(--text-fourth-color);
+  transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current {
@@ -104,24 +110,12 @@
   margin-left: auto;
   align-items: center;
   height: 30px;
-  /* gap: 24px; */
 }
 
 @media screen and (min-width: 768px) {
   .settings-nav {
     gap: 24px;
   }
-}
-
-.animate {
-  margin-left: 80px;
-  stroke: var(--yellow-accent-color);
-  transition: 350ms linear;
-}
-
-.animate:hover,
-.animate:focus {
-  rotate: 180deg;
 }
 
 .authorisation-btn {
@@ -140,7 +134,6 @@
   padding-bottom: 14px;
   align-items: center;
   cursor: pointer;
-
   transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -161,9 +154,11 @@
 }
 
 .checkbox {
+  position: relative;
+  top: 10px;
+  left: -14px;
   width: 40px;
   height: 20px;
-
   background: linear-gradient(
     to bottom,
     rgb(79, 46, 232, 1),
@@ -172,9 +167,6 @@
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s;
-
-  margin-right: 24px;
-  position: relative;
 }
 
 .checkbox:after {
@@ -185,6 +177,11 @@
   font-weight: bold;
   text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.15);
   transition: transform 0.3s;
+  background: linear-gradient(
+    to bottom,
+    rgb(79, 46, 232, 1),
+    rgb(104, 104, 104, 1)
+  );
 }
 
 .checkbox:before {
@@ -193,6 +190,8 @@
   left: 10px;
   z-index: 0;
   font-weight: bold;
+  content: '';
+  transition: transform 0.3s;
 }
 
 .checkbox-lable {
