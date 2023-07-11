@@ -1,10 +1,17 @@
 .my_title {
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.18;
   letter-spacing: -0.04em;
   color: var(--text-secondary-color);
   margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .my_title {
+    font-size: 48px;
+    line-height: 1.08;
+  }
 }
 
 .my_title_books {
