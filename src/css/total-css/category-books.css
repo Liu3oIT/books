@@ -57,21 +57,19 @@
 @media screen and (min-width: 768px) {
   .list__category:nth-child(n) {
     padding-top: 16px;
-  padding-bottom: 16px;
+    padding-bottom: 16px;
   }
 }
 
 .list__category:first-child {
-padding-top: 0;
+  padding-top: 0;
 }
 .list__category:last-child {
   padding-bottom: 0;
-  }
-
+}
 
 .list__category {
   opacity: 60%;
-
 }
 
 .list__category[selected='true'] {
@@ -151,4 +149,11 @@ padding-top: 0;
   .section-books-item:nth-child(n + 4) {
     display: block;
   }
+}
+
+.new-books {
+  flex-wrap: wrap;
+  gap: 24px;
+  display: flex;
+  overflow: hidden;
 }
