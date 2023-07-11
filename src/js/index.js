@@ -5,3 +5,4 @@ import './total-js/listBooks';
 import './total-js/modal'
 import './total-js/shop-list-di';
 import './total-js/scroll-up-btn';
+import './total-js/currentBg';
