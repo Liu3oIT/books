@@ -1,7 +1,6 @@
 .section.header-section {
   padding-top: 0;
   padding-bottom: 0;
-  
 }
 
 .header-container {
@@ -30,13 +29,11 @@
 
 .icon-bookshelf {
   margin-left: 8px;
-  color:black;
-  
+  color: black;
 }
 
 .icon-logo {
   text-align: center;
-  
 }
 
 .header-nav {
@@ -69,7 +66,7 @@
   line-height: calc(18 / 14);
   text-transform: uppercase;
   height: 36px;
-  }
+}
 
 .list-btn {
   display: flex;
@@ -86,7 +83,6 @@
   font-size: 14px;
   line-height: calc(18 / 14);
   text-transform: uppercase;
-
 }
 
 .list-btn-svg {
@@ -169,14 +165,16 @@
   height: 20px;
 
   background: linear-gradient(
-    var(--text-fourth-color) 0%,
-    var(--body-secondary-color) 100%
+    to bottom,
+    rgb(79, 46, 232, 1),
+    rgb(220, 220, 220, 1)
   );
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 
   margin-right: 24px;
   position: relative;
-  border-radius: 50px;
-  box-shadow: inset 1px 1px 2px 0px rgba(0, 0, 0, 0.5);
 }
 
 .checkbox:after {
@@ -186,6 +184,7 @@
   z-index: 0;
   font-weight: bold;
   text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s;
 }
 
 .checkbox:before {
