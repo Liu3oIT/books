@@ -47,9 +47,7 @@ export function markupOneCategoryList(response) {
             })
             .join('')}
         </div>
-        <button class="books-btn" type="button" data-category="${
-          category.list_name
-        }">see more</button>
+        <button class="books-btn" type="button">see more</button>
       </div>
     `;
     list.insertAdjacentHTML('beforeend', titleCategory);
