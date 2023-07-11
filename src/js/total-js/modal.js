@@ -159,6 +159,9 @@ function onBtnCloseClick(e) {
 }
 
 function onCardClick(e) {
+  if (e.target.tagName !== 'IMG') {
+    return;
+  }
   const card = e.target;
   const el = card.closest('[data-id]');
   const id = el.dataset.id;
