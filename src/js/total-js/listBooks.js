@@ -26,15 +26,14 @@ export function markupOneCategoryList(response) {
     }
 
     const titleCategory = `
-    <li>
+    <li  class="books-container-item">
       <div class="section-category-for-books">
         <h2 class="title-category-name">${category.list_name}</h2>
-        <div class="section-books">
+        <ul class="section-books">
           ${category.books
             .map(book => {
               return `
-                
-                  <div data-id="${book._id}">
+                  <li data-id="${book._id}" class="section-books-item">
                     <div class="card-book">
                       <img class="books-card-img" src="${book.book_image}" alt="${book.title}" width="180" height="256" loading="lazy">
                     </div>
@@ -42,15 +41,14 @@ export function markupOneCategoryList(response) {
                       <h3 class="title-books">${book.title}</h3>
                       <p class="name-author">${book.author}</p>
                     </div>
-                  </div>
-                
+                  </li>
               `;
             })
             .join('')}
-        </div>
+        </ul>
         <button class="books-btn" type="button">see more</button>
       </div>
-      </li>
+    </li>
     `;
     list.insertAdjacentHTML('beforeend', titleCategory);
   });
