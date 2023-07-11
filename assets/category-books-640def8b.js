@@ -32,7 +32,7 @@ Notiflix needs to be appended to the "<`+r+'>" element, but you called it before
                   </li>
               `).join("")}
         </ul>
-        <button class="books-btn" type="button">see more</button>
+        <button class="books-btn" type="button" data-category="${i.list_name}">see more</button>
       </div>
     </li>
     `;e.insertAdjacentHTML("beforeend",o)})}async function io(){try{const t=await Je.fetchCategoryBooks();eo(t)}catch(t){console.warn(t)}}async function qe(){try{const t=await Je.fetchTopFiveBooks();console.log(t),no(t)}catch(t){console.warn(t)}}io();qe();const oo="/books/assets/amazon-7a3d88a6.svg",ao="/books/assets/book-apple-6ec5dab2.svg",ro="/books/assets/book-shop-595ed607.svg",at=document.querySelector("#book-modal"),so=document.querySelector(".books-container");document.querySelector(".category-books-list");const lo=document.querySelector(".close-button"),co=document.querySelector(".modal__add-book-btn"),Ae=document.querySelector(".modal__remove-notification"),Ne=document.querySelector(".modal__add-notification"),fo=document.querySelector(".modal__notification");let Ce=document.querySelector(".modal__content"),Rt=null,rt=[];co.addEventListener("click",yo);lo.addEventListener("click",xt);so.addEventListener("click",ho);function mo(t){return fetch(`https://books-backend.p.goit.global/books/${t}`).then(e=>e.json())}function po(t){const e=`
