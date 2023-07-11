@@ -135,7 +135,7 @@
   color: #ffffff;
 }
 
-.notification {
+.modal__notification {
   max-width: 324px;
   margin: 0 auto;
   font-family: 'DM Sans', sans-serif;
@@ -170,8 +170,6 @@
 }
 
 .modal__close-img {
- 
-
   width: 28px;
   height: 28px;
   position: absolute;
@@ -196,5 +194,16 @@ body.dark .an-book-info-modal .amazon-img {
 }
 
 .close-button:hover {
-  color:  var( --text-fourth-color);
+  color: var( --text-fourth-color);
+}
+
+.popup-fade:before {
+	content: '';
+	background: #F6F6F6;
+  position: fixed; 
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%;
+	opacity: 0.7;
 }
