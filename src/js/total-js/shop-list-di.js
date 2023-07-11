@@ -1,14 +1,10 @@
 const shopDiv = document.querySelector('.shop-background');
 const btn = document.querySelector('.modal__add-book-btn');
 
-console.log(btn);
+// console.log(btn);
 
 const infoBooks = [];
 localStorage.setItem('infoBooks', JSON.stringify(infoBooks));
-
-
-
-
 
 btn.addEventListener('click', e => {
   e.preventDefault();
@@ -18,9 +14,6 @@ btn.addEventListener('click', e => {
     console.log(dataId);
   }
 });
-
-
-
 
 function saveLokalStor(info) {
   const infoBooksString = localStorage.getItem('infoBooks');

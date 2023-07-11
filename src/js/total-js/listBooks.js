@@ -1,17 +1,30 @@
 import NewApiService from './API';
 const newApiService = new NewApiService();
+const title = document.querySelector('.my_title_category');
 function markapCategoryList(response) {
   const listCategoryBooks = document.querySelector('.list-category-books');
   response.forEach(e => {
     const listCategory = `
-      <li>${e.list_name}</li>
+      <li class="list__category">${e.list_name}</li>
     `;
     listCategoryBooks.insertAdjacentHTML('beforeend', listCategory);
   });
 }
-function markupCategoryList(response) {
+export function markupOneCategoryList(response) {
   const list = document.querySelector('.books-container');
+  let categoryName = 0;
+
   response.forEach(category => {
+    if (category.books.length !== categoryName) {
+      categoryName = category.books.length;
+      title.insertAdjacentHTML(
+        'beforeend',
+        `<h1 class="my_title">
+      Best Sellers <span class="my_title_books">Books</span>
+    </h1>`
+      );
+    }
+
     const titleCategory = `
       <div class="section-category-for-books">
         <h2 class="title-category-name">${category.list_name}</h2>
@@ -19,7 +32,7 @@ function markupCategoryList(response) {
           ${category.books
             .map(book => {
               return `
-                <li>
+                <li >
                   <div data-id="${book._id}">
                     <div class="card-book">
                       <img class="books-card-img" src="${book.book_image}" alt="${book.title}" width="180" height="256" loading="lazy">
@@ -48,10 +61,11 @@ async function listForCategory() {
     console.warn(error);
   }
 }
-async function topBooks() {
+export async function topBooks() {
   try {
     const response = await newApiService.fetchTopFiveBooks();
-    markupCategoryList(response);
+    console.log(response);
+    markupOneCategoryList(response);
   } catch (error) {
     console.warn(error);
   }

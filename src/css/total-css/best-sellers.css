@@ -1,10 +1,10 @@
 .my_title {
-  text-align: center;
   font-size: 48px;
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.04em;
   color: var(--text-secondary-color);
+  margin-bottom: 40px;
 }
 
 .my_title_books {
