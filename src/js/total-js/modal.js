@@ -94,6 +94,7 @@ const notification = document.querySelector('.modal__notification');
 let modalContent = document.querySelector('.modal__content');
 let idToLocaleStorage = null;
 let arrToLocaleStorage = [];
+let currentBooks = [];
 
 addBookBtn.addEventListener('click', onAddBookClick);
 closeBtn.addEventListener('click', onBtnCloseClick);
@@ -132,6 +133,18 @@ function getCategory(id) {
   });
 }
 
+function updateCurrentBooks() {
+  currentBooks = JSON.parse(localStorage.getItem('shopping-list')) || [];
+}
+
+function addToLocalStorage() {
+  localStorage.setItem('shopping-list', JSON.stringify(currentBooks));
+}
+
+function removeFromLocalStorage() {
+  localStorage.setItem('shopping-list', JSON.stringify(currentBooks));
+}
+
 function onBtnCloseClick(e) {
   if (e.code === 'Escape') {
     backDrop.removeEventListener('keydown', onBtnCloseClick);
@@ -165,17 +178,20 @@ function onAddBookClick(res) {
   removeNotification.classList.toggle('hidden');
   addNotification.classList.toggle('hidden');
 
+  updateCurrentBooks();
+
   if (addNotification.classList.contains('hidden')) {
-    const index = arrToLocaleStorage.indexOf(idToLocaleStorage);
-    if (index === -1) {
-      arrToLocaleStorage.push(idToLocaleStorage);
-      localStorage.setItem('shopping-list', JSON.stringify(arrToLocaleStorage));
+    if (!currentBooks.includes(idToLocaleStorage)) {
+      currentBooks.push(idToLocaleStorage);
+      addToLocalStorage();
     }
   }
 
   if (removeNotification.classList.contains('hidden')) {
-    const arrToFilter = JSON.parse(localStorage.getItem('shopping-list'));
-    const filteredArr = arrToFilter.filter(id => id !== idToLocaleStorage);
-    localStorage.setItem('shopping-list', JSON.stringify(filteredArr));
+    const index = currentBooks.indexOf(idToLocaleStorage);
+    if (index !== -1) {
+      currentBooks.splice(index, 1);
+      removeFromLocalStorage();
+    }
   }
 }
