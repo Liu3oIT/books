@@ -94,6 +94,18 @@
   overflow: hidden;
 }
 
+@media screen and (min-width: 768px) {
+  .books-container {
+    column-gap: 25px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .books-container {
+    column-gap: 24px;
+  }
+}
+
 .section-books {
   margin-bottom: 8px;
 }
