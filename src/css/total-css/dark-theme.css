@@ -89,7 +89,7 @@ body.dark-theme .books-btn {
   color: var(--body-secondary-color);
 }
 
-ody.dark-theme .shop-title {
+body.dark-theme .shop-title {
   color: var(--body-secondary-color);
 }
 
@@ -99,4 +99,35 @@ body.dark-theme .sub-title {
 
 body.dark-theme .shop-text-backgr {
   color:rgba(255, 255, 255, 0.6);
+}
+
+/* Footer */
+
+body.dark-theme .footer_text_left {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .footer_text_right {
+  color: var(--body-secondary-color);
+}
+
+/* Modal Okno */
+body.dark-theme .an-book-info-modal {
+  background-color: var(--text-secondary-color);
+}
+
+body.dark-theme .modal__close-btn {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .modal__title {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .modal__book-desc {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .modal__add-notification {
+  color: var(--body-secondary-color);
 }

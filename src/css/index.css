@@ -10,6 +10,7 @@
 @import url('../../src/css/total-css/shop-buy.css');
 @import url('../../src/css/total-css/aside-menu.css');
 @import url('../../src/css/total-css/dark-theme.css');
+@import url('../../src/css/total-css/header-mobile-menu.css');
 
 :root {
   --body-background-color: #f6f6f6;

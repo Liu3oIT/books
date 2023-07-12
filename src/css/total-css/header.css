@@ -14,6 +14,7 @@
   border-bottom-right-radius: 8px;
   position: sticky;
   z-index: 1000;
+  background-color: var(--body-secondary-color);
 }
 
 .authorisation-btn-desktop.is-hidden-btn {
@@ -223,6 +224,8 @@
   border: transparent;
   padding: 0px;
   cursor: pointer;
+  width: 28px;
+  height: 28px;
   /* margin-left: 24px; */
 }
 

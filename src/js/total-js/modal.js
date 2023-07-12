@@ -89,22 +89,28 @@ function onBtnCloseClick(e) {
   if (e.code === 'Escape') {
     backDrop.removeEventListener('keydown', onBtnCloseClick);
     backDrop.classList.add('is-hidden');
-    showScroll()
   }
 
   if (e.currentTarget === e.target) {
     backDrop.classList.add('is-hidden');
-    showScroll()
   }
 
-  if (e.target.classList.contains('modal__close-img')) {
+  if (e.target.classList.contains('popup-fade')) {
     backDrop.classList.add('is-hidden');
   }
+
+    if (e.target.classList.contains('modal__close-img')) {
+      backDrop.classList.add('is-hidden');
+  }
+  
+  showScroll();
   checkModalState();
 }
 
+
+
 function onCardClick(e) {
-  if (e.target.tagName !== 'IMG') {
+  if (!e.target.closest('.section-books-item')) {
     return;
   }
   const card = e.target;
@@ -123,7 +129,7 @@ function onCardClick(e) {
 
   const backDropclassList = Array.from(backDrop.classList);
   if (!backDropclassList.includes('is-hidden')) {
-    closeScroll()
+    closeScroll();
   }
 }
 
