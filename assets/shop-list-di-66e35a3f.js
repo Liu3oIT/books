@@ -1,4 +1,4 @@
-import{a as e,b as a,c as n,N as c}from"./header-mobile-menu-2032169c.js";const r=new c;let h=localStorage.getItem("shopping-list");const p=JSON.parse(h),d=document.querySelector(".shop-list"),m=document.querySelector(".shop-div"),k=async t=>{for(const s of t){const o=await r.fetchBooksForId(s);Array.isArray(o)?o.forEach(l=>{i(l)}):i(o)}function i(s){m.innerHTML="";const o=`
+import{a as e,b as a,c as n,N as c}from"./header-mobile-menu-61ce57be.js";const r=new c;let h=localStorage.getItem("shopping-list");const p=JSON.parse(h),d=document.querySelector(".shop-list"),m=document.querySelector(".shop-div"),k=async t=>{for(const s of t){const o=await r.fetchBooksForId(s);Array.isArray(o)?o.forEach(l=>{i(l)}):i(o)}function i(s){m.innerHTML="";const o=`
       <li id="${s._id}" class="shopping-list-item">
   <img
     class="sh-book-img"
