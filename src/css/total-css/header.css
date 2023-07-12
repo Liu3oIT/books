@@ -9,10 +9,12 @@
   padding-top: 14px;
   padding-bottom: 13px;
   border: 1.5px solid var(--text-secondary-color);
+  background-color: var(--body-background-color);
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   position: sticky;
   z-index: 1000;
+  background-color: var(--body-secondary-color);
 }
 
 .authorisation-btn-desktop.is-hidden-btn {
@@ -39,7 +41,6 @@
 
 .header-nav {
   position: relative;
-  height: 36px;
   display: flex;
   gap: 24px;
   text-align: center;
@@ -155,7 +156,7 @@
 
 .checkbox {
   position: relative;
-  top: 10px;
+  top: -1px;
   left: -14px;
   width: 40px;
   height: 20px;
@@ -168,7 +169,11 @@
   cursor: pointer;
   transition: background-color 0.3s;
 }
-
+@media screen and (min-width: 768px) {
+  .checkbox {
+    top: 10px;
+  }
+}
 .checkbox:after {
   content: '';
   position: absolute;
@@ -206,8 +211,6 @@
   background: var(--body-secondary-color);
   border-radius: 50px;
   transition: all 0.4s ease;
-  /* box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3); */
-  box-shadow: inset 2px -3px 5px 0px var(--text-fourth-color);
 }
 
 .checkbox-input {
@@ -217,7 +220,6 @@
 .checkbox-input:checked + label {
   left: 21px;
   background-color: var(--body-secondary-color);
-  box-shadow: inset 0px -3px 5px 0px var(--text-fourth-color);
 }
 
 .burger-menu-btn {
@@ -225,6 +227,8 @@
   border: transparent;
   padding: 0px;
   cursor: pointer;
+  width: 28px;
+  height: 28px;
   /* margin-left: 24px; */
 }
 
