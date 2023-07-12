@@ -63,3 +63,16 @@ body.dark-theme .close-menu-icon,
 body.dark-theme .burger-meny-icon {
   stroke: var(--body-background-color);
 }
+
+
+body.dark-theme .list-category-books {
+  color: var( --body-secondary-color);
+}
+
+body.dark-theme .list-category-books li:hover {
+ color:var(--yellow-accent-color);
+}
+
+body.dark-theme .list__category[selected='true'] {
+  color:var(--yellow-accent-color);
+}
