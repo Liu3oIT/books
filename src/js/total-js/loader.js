@@ -1,7 +1,14 @@
-export function showLoader() {
-  loaderOverlay.style.display = 'flex';
+ export function showLoader() {
+  const loaderOverlay = document.querySelector('.loader');
+
+  loaderOverlay.classList.remove('hidden');
+
+
 }
-// Hide the loader
-export function hideLoader() {
-  loaderOverlay.style.display = 'none';
+ export function hideLoader() {
+  const loaderOverlay = document.querySelector('.loader');
+
+  loaderOverlay.classList.add('hidden');
+
+
 }
