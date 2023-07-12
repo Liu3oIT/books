@@ -11,12 +11,10 @@ if (checkBoxEl) {
 
 savedThemeOnReloaded(body, checkBoxEl);
 
-const currentHomePage = document.querySelector('.home-btn');
-const currentShoppingPage = document.querySelector('.list-btn');
+const currentActivePage = document.querySelector('.current');
+const newActivePage = document.querySelector(`[href='.${window.location.pathname}'][data-nav]`);
 
-if (currentShoppingPage) {
-  if (window.location.href === currentShoppingPage.href) {
-    currentShoppingPage.classList.add('current');
-    currentHomePage.classList.remove('current');
-  }
+if (currentActivePage != newActivePage) {
+    currentActivePage.classList.toggle("current");
+    newActivePage.classList.toggle("current");
 }
