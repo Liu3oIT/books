@@ -90,3 +90,14 @@ body.dark-theme .sub-title {
 body.dark-theme .shop-text-backgr {
   color:rgba(255, 255, 255, 0.6);
 }
+body.dark-theme .my_title {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .title-books {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .books-btn {
+  color: var(--body-secondary-color);
+}
