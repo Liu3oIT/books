@@ -11,3 +11,4 @@ import './total-js/dayNight';
 import './total-js/header';
 import './total-js/loader';
 import './total-js/header-mobile-menu';
+import './total-js/pagination-books';
