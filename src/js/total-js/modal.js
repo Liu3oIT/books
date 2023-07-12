@@ -110,7 +110,7 @@ function onBtnCloseClick(e) {
 
 
 function onCardClick(e) {
-  if (e.target.tagName !== 'IMG') {
+  if (!e.target.closest('.section-books-item')) {
     return;
   }
   const card = e.target;
@@ -129,7 +129,7 @@ function onCardClick(e) {
 
   const backDropclassList = Array.from(backDrop.classList);
   if (!backDropclassList.includes('is-hidden')) {
-    closeScroll()
+    closeScroll();
   }
 }
 
