@@ -7,7 +7,7 @@ const newApiService = new NewApiService();
 let idBook = localStorage.getItem('shopping-list');
 const ids = JSON.parse(idBook);
 const listShopBuy = document.querySelector('.shop-list');
-const shopDiv = document.querySelector('.shop-div');
+const shopDiv = document.querySelector('.shop-background');
 
 const getIdlocalStore = async ids => {
   for (const id of ids) {
