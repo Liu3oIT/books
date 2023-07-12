@@ -2,6 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -231,7 +232,7 @@
 }
 
 @media  screen and (min-width: 768px) {
-  .modal__add-book-btn{
+  .modal__remove-notification{
     font-size: 18px;
     line-height: 1.3;
   }

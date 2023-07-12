@@ -3,7 +3,9 @@ import { topBooks } from './listBooks';
 
 const list = document.querySelector('.books-container');
 const title = document.querySelector('.my_title_category');
-async function fetchHits(category) {
+
+export async function fetchHits(category) {
+
   const BASE_URL = 'https://books-backend.p.goit.global/books/category';
   try {
     const response = await axios.get(BASE_URL, {
@@ -37,17 +39,17 @@ function markupCategoryList(response) {
     }
     const titleCategory = `
       <div class="section-category-for-books">
-        <div class="section-books">
+        <div class="section-books">       
           <li>
-            <div data-id="${category._id}">
-              <div class="card-book">
-                <img class="books-card-img" src="${category.book_image}" alt="${category.title}" width="180" height="256" loading="lazy">
+              <div  data-id="${category._id}">
+                  <div class="card-book">
+                  <img class="books-card-img" src="${category.book_image}" alt="${category.title}" width="180" height="256" loading="lazy">             
+                </div>
+                <div class="info-books">
+                  <h3 class="title-books">${category.title}</h3>
+                  <p class="name-author">${category.author}</p>
+                </div>
               </div>
-              <div class="info-books">
-                <h3 class="title-books">${category.title}</h3>
-                <p class="name-author">${category.author}</p>
-              </div>
-            </div>
           </li>
         </div>
       </div>
@@ -105,6 +107,9 @@ function markapForMoreBooks(res, target) {
         <div data-id="${category._id}">
           <div class="card-book">
             <img class="books-card-img" src="${category.book_image}" alt="${category.title}" width="180" height="256" loading="lazy">
+            <div class="overflow-books">
+              <p class="overflow-books-text">quick view</p>
+            </div>
           </div>
           <div class="info-books">
             <h3 class="title-books">${category.title}</h3>

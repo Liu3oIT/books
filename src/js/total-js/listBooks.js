@@ -1,4 +1,6 @@
+
 import NewApiService from './API';
+import {showLoader,hideLoader} from './loader';
 const newApiService = new NewApiService();
 const title = document.querySelector('.my_title_category');
 function markapCategoryList(response) {
@@ -36,6 +38,9 @@ export function markupOneCategoryList(response) {
                   <li data-id="${book._id}" class="section-books-item">
                     <div class="card-book">
                       <img class="books-card-img" src="${book.book_image}" alt="${book.title}" width="180" height="256" loading="lazy">
+                      <div class="overflow-books">
+                        <p class="overflow-books-text">quick view</p>
+                      </div>
                     </div>
                     <div class="info-books">
                       <h3 class="title-books">${book.title}</h3>
@@ -56,20 +61,28 @@ export function markupOneCategoryList(response) {
   });
 }
 async function listForCategory() {
+  showLoader()
   try {
     const response = await newApiService.fetchCategoryBooks();
     markapCategoryList(response);
   } catch (error) {
     console.warn(error);
   }
+   finally{
+    hideLoader()
+  }
 }
 export async function topBooks() {
+  showLoader()
   try {
     const response = await newApiService.fetchTopFiveBooks();
 
     markupOneCategoryList(response);
   } catch (error) {
     console.warn(error);
+  }
+  finally{
+    hideLoader()
   }
 }
 listForCategory();
