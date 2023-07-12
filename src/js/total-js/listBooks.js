@@ -1,4 +1,6 @@
+
 import NewApiService from './API';
+import {showLoader,hideLoader} from './loader';
 const newApiService = new NewApiService();
 const title = document.querySelector('.my_title_category');
 function markapCategoryList(response) {
