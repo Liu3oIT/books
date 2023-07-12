@@ -77,6 +77,9 @@ function onCardClick(e) {
   backDrop.classList.remove('is-hidden');
 } */
 
+
+
+
 import amazon from '../../img/amazon.svg';
 import applebook from '../../img/book-apple.svg';
 import bookshop from '../../img/book-shop.svg';
