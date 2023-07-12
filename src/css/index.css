@@ -9,6 +9,8 @@
 @import url('../../src/css/total-css/best-sellers.css');
 
 @import url('../../src/css/total-css/aside-menu.css');
+@import url('../../src/css/total-css/dark-theme.css');
+
 
 :root {
   --body-background-color: #f6f6f6;
@@ -21,6 +23,7 @@
 
   --text-fourth-color: #4f2ee8;
   --yellow-accent-color: #EAC645;
+  --body-dark-theme-color: #202024;
 }
 
 body {
