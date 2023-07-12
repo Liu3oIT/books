@@ -76,3 +76,15 @@ body.dark-theme .list-category-books li:hover {
 body.dark-theme .list__category[selected='true'] {
   color:var(--yellow-accent-color);
 }
+
+body.dark-theme .my_title {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .title-books {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .books-btn {
+  color: var(--body-secondary-color);
+}
