@@ -157,7 +157,7 @@
 
 .checkbox {
   position: relative;
-  top: 10px;
+  top: -1px;
   left: -14px;
   width: 40px;
   height: 20px;
@@ -170,7 +170,11 @@
   cursor: pointer;
   transition: background-color 0.3s;
 }
-
+@media screen and (min-width: 768px) {
+  .checkbox {
+    top: 10px;
+  }
+}
 .checkbox:after {
   content: '';
   position: absolute;
@@ -231,7 +235,7 @@
 
 .burger-menu-icon {
   stroke: var(--text-secondary-color);
-  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1),
+   transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1),
     transform 550ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
