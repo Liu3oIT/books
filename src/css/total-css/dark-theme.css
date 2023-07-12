@@ -129,3 +129,21 @@ body.dark-theme .modal__add-notification {
 body.dark-theme .modal__notification {
   color:  rgba(255, 255, 255, 0.5);
 }
+
+/* Shoping list */
+
+body.dark-theme .sh-book-title {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .sh-book-category {
+  color: var(--text-gray);
+}
+
+body.dark-theme .sh-book-description {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .sh-book-author {
+  color: var(--text-gray);
+}
