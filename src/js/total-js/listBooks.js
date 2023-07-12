@@ -61,20 +61,28 @@ export function markupOneCategoryList(response) {
   });
 }
 async function listForCategory() {
+  showLoader()
   try {
     const response = await newApiService.fetchCategoryBooks();
     markapCategoryList(response);
   } catch (error) {
     console.warn(error);
   }
+   finally{
+    hideLoader()
+  }
 }
 export async function topBooks() {
+  showLoader()
   try {
     const response = await newApiService.fetchTopFiveBooks();
 
     markupOneCategoryList(response);
   } catch (error) {
     console.warn(error);
+  }
+  finally{
+    hideLoader()
   }
 }
 listForCategory();
