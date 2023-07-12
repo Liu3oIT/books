@@ -1,10 +1,18 @@
 .my_title {
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.18;
   letter-spacing: -0.04em;
   color: var(--text-secondary-color);
+  margin: 0;
   margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .my_title {
+    font-size: 48px;
+    line-height: 1.08;
+  }
 }
 
 .my_title_books {
@@ -49,10 +57,24 @@
 }
 
 .books-card-img {
-  width: 180px;
-  height: 256px;
+  width: 335px;
+  height: 485px;
   display: block;
-  margin-bottom: 14px;
+  border-radius: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .books-card-img {
+    width: 218px;
+    height: 316px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .books-card-img {
+    width: 180px;
+    height: 256px;
+  }
 }
 
 .name-author {
@@ -63,7 +85,6 @@
   font-style: italic;
   font-weight: 400;
   line-height: 1.16667;
-  margin-bottom: 32px;
   overflow: hidden;
 }
 
