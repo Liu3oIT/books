@@ -7,11 +7,10 @@
 @import url('../../src/css/total-css/support-ukraine.css');
 @import url('../../src/css/total-css/category-books.css');
 @import url('../../src/css/total-css/best-sellers.css');
-
+@import url('../../src/css/total-css/shop-buy.css');
 @import url('../../src/css/total-css/aside-menu.css');
 @import url('../../src/css/total-css/dark-theme.css');
 @import url('../../src/css/total-css/header-mobile-menu.css');
-
 
 :root {
   --body-background-color: #f6f6f6;
@@ -23,7 +22,7 @@
   --text-secondary-color: #111111;
 
   --text-fourth-color: #4f2ee8;
-  --yellow-accent-color: #EAC645;
+  --yellow-accent-color: #eac645;
   --body-dark-theme-color: #202024;
 }
 
