@@ -101,7 +101,9 @@ function onBtnCloseClick(e) {
 
     if (e.target.classList.contains('modal__close-img')) {
       backDrop.classList.add('is-hidden');
-    }
+  }
+  
+  showScroll();
   checkModalState();
 }
 
