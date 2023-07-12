@@ -89,10 +89,12 @@ function onBtnCloseClick(e) {
   if (e.code === 'Escape') {
     backDrop.removeEventListener('keydown', onBtnCloseClick);
     backDrop.classList.add('is-hidden');
+    showScroll()
   }
 
   if (e.currentTarget === e.target) {
     backDrop.classList.add('is-hidden');
+    showScroll()
   }
 
   if (e.target.classList.contains('modal__close-img')) {
@@ -118,6 +120,11 @@ function onCardClick(e) {
   getCategory(id);
   backDrop.classList.remove('is-hidden');
   checkBookId();
+
+  const backDropclassList = Array.from(backDrop.classList);
+  if (!backDropclassList.includes('is-hidden')) {
+    closeScroll()
+  }
 }
 
 function onAddBookClick(res) {
@@ -133,7 +140,7 @@ function onAddBookClick(res) {
       addToLocalStorage();
     }
   }
-  
+
   if (removeNotification.classList.contains('hidden')) {
     const index = currentBooks.indexOf(idToLocaleStorage);
     if (index !== -1) {
@@ -147,8 +154,16 @@ updateCurrentBooks();
 
 
 
+const html = document.documentElement;
 
 
+function closeScroll() {
+  html.style.overflow = 'hidden'
+}
+
+function showScroll() {
+  html.style.overflow = 'auto'
+}
 
 
 
