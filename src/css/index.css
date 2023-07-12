@@ -7,7 +7,7 @@
 @import url('../../src/css/total-css/support-ukraine.css');
 @import url('../../src/css/total-css/category-books.css');
 @import url('../../src/css/total-css/best-sellers.css');
-
+@import url('./shop-list-di.css');
 @import url('../../src/css/total-css/aside-menu.css');
 
 :root {
@@ -20,7 +20,7 @@
   --text-secondary-color: #111111;
 
   --text-fourth-color: #4f2ee8;
-  --yellow-accent-color: #EAC645;
+  --yellow-accent-color: #eac645;
 }
 
 body {
