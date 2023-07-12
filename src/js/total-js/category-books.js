@@ -5,7 +5,6 @@ const list = document.querySelector('.books-container');
 const title = document.querySelector('.my_title_category');
 
 export async function fetchHits(category) {
-
   const BASE_URL = 'https://books-backend.p.goit.global/books/category';
   try {
     const response = await axios.get(BASE_URL, {
@@ -38,9 +37,9 @@ function markupCategoryList(response) {
       );
     }
     const titleCategory = `
+    <li class="section-books-item">
       <div class="section-category-for-books">
         <div class="section-books">       
-          <li>
               <div  data-id="${category._id}">
                   <div class="card-book">
                   <img class="books-card-img" src="${category.book_image}" alt="${category.title}" width="180" height="256" loading="lazy">             
@@ -50,9 +49,9 @@ function markupCategoryList(response) {
                   <p class="name-author">${category.author}</p>
                 </div>
               </div>
-          </li>
         </div>
       </div>
+       </li>
     `;
 
     list.insertAdjacentHTML('beforeend', titleCategory);

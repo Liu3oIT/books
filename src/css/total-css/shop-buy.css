@@ -26,7 +26,7 @@
   width: 100%;
 }
 .sh-book-category {
-  color: var(--text-second);
+  color: #d9d9d9;
   letter-spacing: 0.36px;
   margin-bottom: 8px;
   font-size: 12px;
@@ -39,7 +39,7 @@
   }
 }
 .sh-book-description {
-  color: var(--text-main);
+  color: var(--text-secondary-color);
   letter-spacing: -0.56px;
   -webkit-line-clamp: 4;
   text-overflow: ellipsis;
@@ -50,7 +50,7 @@
   display: -webkit-box;
 }
 .sh-book-author {
-  color: var(--text-second);
+  color: #b4afaf;
   letter-spacing: -0.48px;
   font-size: 12px;
   font-style: italic;
@@ -115,4 +115,8 @@
 .sh-list-delete-icon {
   fill: #4f2ee8;
   stroke: #fff;
+}
+
+.shop-title {
+  margin-bottom: 40px;
 }

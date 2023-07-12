@@ -9,6 +9,7 @@ h1 {
 .shop-title {
   font-weight: bold;
   font-size: 32px;
+  margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
   .shop-title {
