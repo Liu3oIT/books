@@ -1,4 +1,4 @@
-import{N as C,a as B,b as E,c as q,d as T}from"./header-mobile-menu-61ce57be.js";function f(){document.querySelector(".loader").classList.remove("hidden")}function y(){document.querySelector(".loader").classList.add("hidden")}const b=new C,M=document.querySelector(".my_title_category");function A(t){const o=document.querySelector(".list-category-books");t.forEach(e=>{const s=`
+import{N as C,a as B,b as E,c as q,d as T}from"./header-mobile-menu-7a809013.js";function f(){document.querySelector(".loader").classList.remove("hidden")}function y(){document.querySelector(".loader").classList.add("hidden")}const b=new C,M=document.querySelector(".my_title_category");function A(t){const o=document.querySelector(".list-category-books");t.forEach(e=>{const s=`
       <li class="list__category">${e.list_name}</li>
     `;o.insertAdjacentHTML("beforeend",s)})}function O(t){const o=document.querySelector(".books-container");let e=0;t.forEach(s=>{s.books.length!==e&&(e=s.books.length,M.insertAdjacentHTML("beforeend",`<h1 class="my_title">
       Best Sellers <span class="my_title_books">Books</span>
@@ -40,9 +40,9 @@ import{N as C,a as B,b as E,c as q,d as T}from"./header-mobile-menu-61ce57be.js"
       </ul>
     </div>
   `;g.innerHTML="",g.innerHTML=o}function R(t){z(t).then(o=>{F(o)})}function L(){n=JSON.parse(localStorage.getItem("shopping-list"))||[]}function D(){localStorage.setItem("shopping-list",JSON.stringify(n))}function J(){localStorage.setItem("shopping-list",JSON.stringify(n))}function d(t){t.code==="Escape"&&(i.removeEventListener("keydown",d),i.classList.add("is-hidden")),t.currentTarget===t.target&&i.classList.add("is-hidden"),t.target.classList.contains("popup-fade")&&i.classList.add("is-hidden"),t.target.classList.contains("modal__close-img")&&i.classList.add("is-hidden"),Y(),v()}function U(t){if(!t.target.closest("IMG"))return;const o=t.target,s=o.closest("[data-id]").dataset.id;if(window.addEventListener("keydown",d),i.addEventListener("click",d),i.addEventListener("keydown",d),o.classList.contains("books-btn"))return;r=s,R(s),i.classList.remove("is-hidden"),x(),Array.from(i.classList).includes("is-hidden")||P()}function G(t){if(k.classList.toggle("hidden"),u.classList.toggle("hidden"),m.classList.toggle("hidden"),L(),m.classList.contains("hidden")&&(n.includes(r)||(n.push(r),D())),u.classList.contains("hidden")){const o=n.indexOf(r);o!==-1&&(n.splice(o,1),J())}}v();L();const _=document.documentElement;function P(){_.style.overflow="hidden"}function Y(){_.style.overflow="auto"}function K(){const t=document.querySelector("#scroll-top");t.addEventListener("click",e),window.addEventListener("scroll",o);function o(){const s=window.scrollY,a=700;t.classList.toggle("js-scroll-up_hidden",s<a)}function e(){window.scrollTo({top:0,behavior:"smooth"})}window.addEventListener("load",()=>{window.scrollTo(0,0)})}K();const h=document.querySelector(".books-container"),w=document.querySelector(".my_title_category");async function S(t){const o="https://books-backend.p.goit.global/books/category";try{const e=await T.get(o,{params:{category:t}});if(e.status!==200)throw new Error(`Request failed with status ${e.status}`);return V(e.data),e.data}catch(e){throw new Error(`Request failed: ${e.message}`)}}const Q=document.querySelector(".list-category-books");function V(t){let o="";t.forEach(e=>{e.list_name!==o&&(o=e.list_name,w.insertAdjacentHTML("beforeend",`<h1 class="my_title">${e.list_name}</h1>`));const s=`
+    <li class="section-books-item">
       <div class="section-category-for-books">
         <div class="section-books">       
-          <li>
               <div  data-id="${e._id}">
                   <div class="card-book">
                   <img class="books-card-img" src="${e.book_image}" alt="${e.title}" width="180" height="256" loading="lazy">             
@@ -52,9 +52,9 @@ import{N as C,a as B,b as E,c as q,d as T}from"./header-mobile-menu-61ce57be.js"
                   <p class="name-author">${e.author}</p>
                 </div>
               </div>
-          </li>
         </div>
       </div>
+       </li>
     `;h.insertAdjacentHTML("beforeend",s)})}const W=async t=>{h.innerHTML="",w.innerHTML="";const o=t.target;if(o.tagName!=="LI")return;const e=o.textContent;await S(e),document.querySelectorAll(".list__category").forEach(a=>{a.removeAttribute("selected")}),o.setAttribute("selected","true")},X=async t=>{const o=t.target;if(o.tagName!=="BUTTON")return;const s=o.closest("[data-category]").dataset.category;try{const a=await tt(s);Z(a,o),o.style.display="none"}catch(a){console.error("Error:",a)}};function Z(t,o){const s=t.splice(5),a=document.createElement("div");a.classList.add("new-books"),s.forEach(l=>{const $=`
       <li>
         <div data-id="${l._id}">
