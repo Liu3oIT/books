@@ -109,7 +109,7 @@ function onBtnCloseClick(e) {
 
 
 function onCardClick(e) {
-  if (!e.target.closest('.section-books-item')) {
+  if (!e.target.closest('IMG')) {
     return;
   }
   const card = e.target;
