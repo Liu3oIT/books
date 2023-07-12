@@ -23,7 +23,6 @@ const getIdlocalStore = async ids => {
   }
 
   function processBook(book) {
-    console.log(book);
     shopDiv.innerHTML = '';
     const booksForShop = `
       <li id="${book._id}" class="shopping-list-item">
@@ -62,15 +61,6 @@ const getIdlocalStore = async ids => {
 };
 getIdlocalStore(ids);
 const btnByu = document.querySelector('.modal__add-book-btn');
+const beletbooks = document.querySelector('.sh-list-delete-btn');
 
-// btnByu.addEventListener('click', buybook);
-
-// {
-//   /* ${book.buy_links.map(urlbuy => {
-//         return`<ul class="modal__list">
-//       <li class="modal__item"><a href="${urlbuy.url[0]}" class="amazon-link" target="_blank"><img class="store-link-img amazon-img" src="${amazon}" alt=""></a></li>
-//       <li class="modal__item"><a href="${urlbuy.url[1]}" class="app-book-link" target="_blank"><img class="store-link-img" src="${applebook}" alt=""></a></li>
-//       <li class="modal__item"><a href="${urlbuy.url[3]}" class="book-shop-link" target="_blank"><img class="store-link-img" src="${bookshop}" alt=""></a></li>
-//     </ul`
-//       }).join('')} */
-// }
+console.log(beletbooks);
