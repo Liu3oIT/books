@@ -126,3 +126,6 @@ body.dark-theme .modal__add-notification {
   color: var(--body-secondary-color);
 }
 
+body.dark-theme .modal__notification {
+  color:  rgba(255, 255, 255, 0.5);
+}
