@@ -30,8 +30,6 @@ function createAllBookCategory (data) {
     </div>
     `
 
-    //<a href="#" class="books-item-link" aria-label="books-item-link" rel="noopener noreferrer" data-id='${book._id}></a>
-
   }).join("");
 
   return markup;
@@ -40,10 +38,6 @@ function createAllBookCategory (data) {
 async function createMarkupCategoryBook (element) {
 
   const data = await fetchHits(element);
-
-  // const categoryListById = document.querySelector(
-  //   `[data-list-id="${category}"]`
-  // ); 
 
   categoryListById.innerHTML = createAllBookCategory(data);
 

@@ -39,12 +39,8 @@ function markupCategoryList(response) {
     }
     const titleCategory = `
       <div class="section-category-for-books">
-        <div class="section-books">
-
-        
+        <div class="section-books">       
           <li>
-          
-            <div data-list-id="${category.list_name}>
               <div data-id="${category._id}">
                 <div class="card-book">
                   <img class="books-card-img" src="${category.book_image}" alt="${category.title}" width="180" height="256" loading="lazy">
@@ -54,11 +50,7 @@ function markupCategoryList(response) {
                   <p class="name-author">${category.author}</p>
                 </div>
               </div>
-            </div>
-
           </li>
-         
-
         </div>
       </div>
     `;
