@@ -10,65 +10,21 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="./css/total-css/support-ukrain-shop-list.css" />
   </head>
-  <body>
-    <header>
-      <section class="section header-section">
-        <div class="container header-container">
-          <div class="logo">
-            <a href="./index.html" class="logo-link">
-              <svg class="icon-logo" width="24" height="24">
-                <use href="./img/icons.svg#icon-logo-light-theme"></use>
-              </svg>
-              <svg class="icon-bookshelf" width="77" height="14">
-                <use href="./img/icon-bookshelf.svg"></use>
-              </svg>
-            </a>
-          </div>
-          <ul class="header-nav">
-            <li>
-              <a class="home-btn current js-link" href="./index.html">Home</a>
-            </li>
-            <li>
-              <a class="list-btn js-link shoppingListDesk" href="./shop-list-di.html">
-                Shopping list
-                <svg class="list-btn-svg fill" width="20" height="20">
-                  <use href="./img/icons.svg#shop-list-icon"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-          <div class="settings-nav">
-            <div class="checkbox">
-              <input class="checkbox-input" type="checkbox" value="None" id="checkbox" name="check" checked />
-              <label class="checkbox-lable" for="checkbox"></label>
-            </div>
-            <button class="burger-menu-btn js-burger" type="button">
-              <svg class="burger-menu-icon" width="28" height="28">
-                <use href="./img/icons.svg#burger-menu"></use>
-              </svg>
-            </button>
-            <button class="close-menu-btn js-close-menu is-hidden-btn" type="button">
-              <svg class="close-menu-icon" width="18" height="18">
-                <use href="./img/icons.svg#icon-x-close"></use>
-              </svg>
-            </button>
-          </div>
-          <button class="authorisation-btn authorisation-btn-desktop">
-            Sign up
-            <svg class="arr-icon-yellow" width="14" height="10">
-              <use href="./img/arrow-icon.svg"></use>
-            </svg>
-          </button>
-        </div>
-      </section>
-
-    </header>
+  <body data-page="shop-list">
+  <header>
+    <load crc="markup/header.html" />
+  </header>
     <main>
+      <div class="container aside-container">
+        <aside class="aside-menu">
+          <load crc="markup/support-ukraine.html" />
+        </aside>
       <section class="shopping-list container">
         <!-- спісок з локал-сторідж -->
 
-        <ul></ul>
+        <ul class="shop-list"></ul>
 
         <!-- дефолтний вигляд -->
 
@@ -98,9 +54,9 @@
     </main>
   </body>
   <footer>
-    
+    <load crc="/markup/footer.html" />
   </footer>
   
-  <script type="module" src="/js/index.js"></script>
+  <script type="module" src="./js/shop-list.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 </html>

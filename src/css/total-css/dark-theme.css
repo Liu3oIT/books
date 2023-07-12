@@ -1,0 +1,128 @@
+body.dark-theme {
+  background-color: var(--body-dark-theme-color);
+  color: var(--);
+  transition: background-color 300ms ease-in;
+}
+
+/* header */
+
+body.dark-theme .header-container {
+  background-color: var(--body-dark-theme-color);
+  border: 1.5px solid var(--body-background-color);
+}
+
+body.dark-theme .icon-bookshelf {
+  fill: #f3f3f3;
+}
+
+body.dark-theme .logo-link:hover,
+body.dark-theme .logo-link:focus,
+body.dark-theme .icon-bookshelf:hover,
+body.dark-theme .icon-bookshelf:focus {
+  fill: var(--text-fourth-color);
+}
+
+body.dark-theme .list-btn-svg {
+  fill: var(--body-background-color);
+}
+body.dark-theme .list-btn,
+body.dark-theme .home-btn {
+  color: var(--body-background-color);
+}
+
+body.dark-theme .list-btn.current .list-btn-svg {
+  fill: var(--body-background-color);
+}
+
+body.dark-theme .header-nav .current {
+  color: var(--body-background-color);
+}
+
+body.dark-theme .current:hover,
+body.dark-theme .current:focus {
+  color: var(--body-background-color);
+  fill: var(--body-background-color);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15), 3px 12px 38px -5px #e7a61ab8;
+}
+
+body.dark-theme .checkbox {
+  background: linear-gradient(
+    180deg,
+    var(--text-fourth-color) 0%,
+    #686868 100%
+  );
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+body.dark-theme .burger-menu-icon {
+  stroke: var(--body-background-color);
+}
+body.dark-theme .close-menu-icon {
+  stroke: var(--body-background-color);
+}
+body.dark-theme .list-category-books {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .list-category-books li:hover {
+  color: var(--yellow-accent-color);
+}
+
+body.dark-theme .list__category[selected='true'] {
+  color: var(--yellow-accent-color);
+}
+
+body.dark-theme .my_title {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .title-books {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .books-btn {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .shop-title {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .sub-title {
+  color: var(--text-fourth-color);
+}
+
+body.dark-theme .shop-text-backgr {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Footer */
+
+body.dark-theme .footer_text_left {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .footer_text_right {
+  color: var(--body-secondary-color);
+}
+
+/* Modal Okno */
+body.dark-theme .an-book-info-modal {
+  background-color: var(--text-secondary-color);
+}
+
+body.dark-theme .modal__close-btn {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .modal__title {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .modal__book-desc {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .modal__add-notification {
+  color: var(--body-secondary-color);
+}
+
