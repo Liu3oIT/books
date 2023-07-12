@@ -89,19 +89,23 @@ function onBtnCloseClick(e) {
   if (e.code === 'Escape') {
     backDrop.removeEventListener('keydown', onBtnCloseClick);
     backDrop.classList.add('is-hidden');
-    showScroll()
   }
 
   if (e.currentTarget === e.target) {
     backDrop.classList.add('is-hidden');
-    showScroll()
   }
 
-  if (e.target.classList.contains('modal__close-img')) {
+  if (e.target.classList.contains('popup-fade')) {
     backDrop.classList.add('is-hidden');
   }
+
+    if (e.target.classList.contains('modal__close-img')) {
+      backDrop.classList.add('is-hidden');
+    }
   checkModalState();
 }
+
+
 
 function onCardClick(e) {
   if (e.target.tagName !== 'IMG') {
