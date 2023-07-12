@@ -9,9 +9,14 @@ if (checkBoxEl) {
 
 savedThemeOnReloaded(body, checkBoxEl);
 
+const currentHomePage = document.querySelector('.home-btn');
 const currentShoppingPage = document.querySelector('.list-btn');
-currentShoppingPage.classList.add('current');
 
-function eventHandlerCurrentPage() {
-    
+    if (currentShoppingPage) {
+    if (window.location.href === currentShoppingPage.href) {
+    currentShoppingPage.classList.add('current');
+    // mobileMenuList.add('current');
+    currentHomePage.classList.remove('current');
+    // mobileMenuHome.classList.remove('current');
+}
 }
