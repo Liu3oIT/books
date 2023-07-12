@@ -103,6 +103,17 @@ addBookBtn.addEventListener('click', onAddBookClick);
 closeBtn.addEventListener('click', onBtnCloseClick);
 bestSellerRef.addEventListener('click', onCardClick);
 
+function checkModalState() {
+  const isModalOpen = !backDrop.classList.contains('is-hidden');
+
+  if (!isModalOpen) {
+    addNotification.classList.remove('hidden');
+    removeNotification.classList.add('hidden');
+    notification.classList.add('hidden');
+  }
+}
+
+
 function fetchCategory(id) {
   return fetch(`https://books-backend.p.goit.global/books/${id}`).then(res =>
     res.json()
@@ -159,6 +170,7 @@ function onBtnCloseClick(e) {
   if (e.target.classList.contains('modal__close-img')) {
     backDrop.classList.add('is-hidden');
   }
+  checkModalState();
 }
 
 function onCardClick(e) {
