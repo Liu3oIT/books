@@ -1,4 +1,4 @@
-import{s as Bi,h as Mi,N as y_,a as A_,b as L_,c as S_,d as fe,e as b_}from"./backdrop-heart-96a833e4.js";const wo=new y_,E_=document.querySelector(".my_title_category");function C_(m){const S=document.querySelector(".list-category-books");m.forEach(o=>{const q=`
+import{s as Bi,h as Mi,N as y_,a as A_,b as L_,c as S_,d as fe,e as b_}from"./backdrop-heart-6a045fff.js";const wo=new y_,E_=document.querySelector(".my_title_category");function C_(m){const S=document.querySelector(".list-category-books");m.forEach(o=>{const q=`
       <li class="list__category">${o.list_name}</li>
     `;S.insertAdjacentHTML("beforeend",q)})}function T_(m){const S=document.querySelector(".books-container");let o=0;m.forEach(q=>{q.books.length!==o&&(o=q.books.length,E_.insertAdjacentHTML("beforeend",`<h1 class="my_title">
       Best Sellers <span class="my_title_books">Books</span>

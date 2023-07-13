@@ -1,4 +1,4 @@
-import{a as p,b as d,c as h,N as g}from"./backdrop-heart-96a833e4.js";const m=new g,e=document.querySelector(".shop-list"),a=document.querySelector(".shop-background");console.log(a);const k=async s=>{for(const o of s){const t=await m.fetchBooksForId(o);Array.isArray(t)?t.forEach(i=>{l(i)}):l(t)}},l=s=>{a.innerHTML="";const o=`
+import{a as p,b as d,c as h,N as g}from"./backdrop-heart-6a045fff.js";const m=new g,e=document.querySelector(".shop-list"),a=document.querySelector(".shop-background");console.log(a);const k=async s=>{for(const o of s){const t=await m.fetchBooksForId(o);Array.isArray(t)?t.forEach(i=>{l(i)}):l(t)}},l=s=>{a.innerHTML="";const o=`
     <li class="shopping-list-item" data-id="${s._id}">
       <img class="sh-book-img" src="${s.book_image}" alt="Boook image" loading="lazy"></img>
       <div class="sh-wrap">
