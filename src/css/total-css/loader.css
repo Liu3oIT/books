@@ -130,8 +130,8 @@ display: none;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10000;
-  display: none;
-}
+  /* display: none; */
+} 
 .loader::before , .loader::after {
   content: "";
   box-sizing: border-box;
@@ -156,4 +156,7 @@ display: none;
     0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
     50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
     75%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+}
+.hidden{
+  display: none;
 }
