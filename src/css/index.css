@@ -12,6 +12,7 @@
 @import url('../../src/css/total-css/dark-theme.css');
 @import url('../../src/css/total-css/header-mobile-menu.css');
 @import url('../../src/css/total-css/pagination-books.css');
+@import url('../../src/css/total-css/backdrop-heart.css');
 
 :root {
   --body-background-color: #f6f6f6;
