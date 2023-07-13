@@ -1,6 +1,5 @@
 import {fetchHits} from './category-books';
 
-
 const loadMoreBtn = document.querySelectorAll(".books-btn");
 const listBooks = document.querySelector('.books-container');
 // const sectionBooks = document.querySelector(".section-books");

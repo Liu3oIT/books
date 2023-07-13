@@ -1,0 +1,30 @@
+/* .posts-shop-books {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.pagination-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.pagination-item {
+  margin: 8px;
+  padding: 8px;
+  cursor: pointer;
+  color: #fff;
+}
+
+
+.pagination-item-active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+} */
