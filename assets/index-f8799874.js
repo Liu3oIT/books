@@ -1,4 +1,4 @@
-import{N as C,a as B,b as E,c as q,d as T}from"./backdrop-heart-320f6811.js";function f(){document.querySelector(".loader").classList.remove("hidden")}function y(){document.querySelector(".loader").classList.add("hidden")}const b=new C,M=document.querySelector(".my_title_category");function A(t){const o=document.querySelector(".list-category-books");t.forEach(e=>{const s=`
+import{N as C,a as B,b as E,c as q,d as T}from"./backdrop-heart-320f6811.js";function f(){document.querySelector(".loader").classList.remove("hidden")}function b(){document.querySelector(".loader").classList.add("hidden")}const y=new C,M=document.querySelector(".my_title_category");function A(t){const o=document.querySelector(".list-category-books");t.forEach(e=>{const s=`
       <li class="list__category">${e.list_name}</li>
     `;o.insertAdjacentHTML("beforeend",s)})}function O(t){const o=document.querySelector(".books-container");let e=0;t.forEach(s=>{s.books.length!==e&&(e=s.books.length,M.insertAdjacentHTML("beforeend",`<h1 class="my_title">
       Best Sellers <span class="my_title_books">Books</span>
@@ -25,7 +25,7 @@ import{N as C,a as B,b as E,c as q,d as T}from"./backdrop-heart-320f6811.js";fun
         <button class="books-btn" type="button" data-category="${s.list_name}">see more</button>
       </div>
     </li>
-    `;o.insertAdjacentHTML("beforeend",i)})}async function H(){f();try{const t=await b.fetchCategoryBooks();A(t)}catch(t){console.warn(t)}finally{y()}}async function p(){f();try{const t=await b.fetchTopFiveBooks();O(t)}catch(t){console.warn(t)}finally{y()}}H();p();const a=document.querySelector("#book-modal"),I=document.querySelector(".books-container");document.querySelector(".category-books-list");const N=document.querySelector(".close-button"),j=document.querySelector(".modal__add-book-btn"),m=document.querySelector(".modal__remove-notification"),u=document.querySelector(".modal__add-notification"),k=document.querySelector(".modal__notification");let g=document.querySelector(".modal__content"),r=null,n=[];j.addEventListener("click",P);N.addEventListener("click",d);I.addEventListener("click",U);function v(){!a.classList.contains("is-hidden")||(u.classList.remove("hidden"),m.classList.add("hidden"),k.classList.add("hidden"))}function x(){n.includes(r)?(k.classList.remove("hidden"),m.classList.remove("hidden"),u.classList.add("hidden")):(k.classList.add("hidden"),m.classList.add("hidden"),u.classList.remove("hidden"))}function z(t){return fetch(`https://books-backend.p.goit.global/books/${t}`).then(o=>o.json())}function F(t){const o=`
+    `;o.insertAdjacentHTML("beforeend",i)})}async function H(){f();try{const t=await y.fetchCategoryBooks();A(t)}catch(t){console.warn(t)}finally{b()}}async function p(){f();try{const t=await y.fetchTopFiveBooks();O(t)}catch(t){console.warn(t)}finally{b()}}H();p();const a=document.querySelector("#book-modal"),I=document.querySelector(".books-container");document.querySelector(".category-books-list");const N=document.querySelector(".close-button"),j=document.querySelector(".modal__add-book-btn"),m=document.querySelector(".modal__remove-notification"),u=document.querySelector(".modal__add-notification"),k=document.querySelector(".modal__notification");let g=document.querySelector(".modal__content"),r=null,n=[];j.addEventListener("click",P);N.addEventListener("click",d);I.addEventListener("click",U);function v(){!a.classList.contains("is-hidden")||(u.classList.remove("hidden"),m.classList.add("hidden"),k.classList.add("hidden"))}function x(){n.includes(r)?(k.classList.remove("hidden"),m.classList.remove("hidden"),u.classList.add("hidden")):(k.classList.add("hidden"),m.classList.add("hidden"),u.classList.remove("hidden"))}function z(t){return fetch(`https://books-backend.p.goit.global/books/${t}`).then(o=>o.json())}function F(t){const o=`
     <div class="modal__img-container">
       <img src="${t.book_image}" alt="${t.title}" class="modal__img">
     </div>
@@ -45,8 +45,11 @@ import{N as C,a as B,b as E,c as q,d as T}from"./backdrop-heart-320f6811.js";fun
         <div class="section-books">       
               <div  data-id="${e._id}">
                   <div class="card-book">
-                  <img class="books-card-img" src="${e.book_image}" alt="${e.title}" width="180" height="256" loading="lazy">             
-                </div>
+                  <img class="books-card-img" src="${e.book_image}" alt="${e.title}" width="180" height="256" loading="lazy">   
+                    <div class="overflow-books">
+                      <p class="overflow-books-text">quick view</p>
+                    </div>          
+                  </div>
                 <div class="info-books">
                   <h3 class="title-books">${e.title}</h3>
                   <p class="name-author">${e.author}</p>
