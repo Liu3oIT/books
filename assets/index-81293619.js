@@ -1,4 +1,4 @@
-import{N as C,a as B,b as E,c as q,d as T}from"./header-mobile-menu-b932d82e.js";function f(){document.querySelector(".loader").classList.remove("hidden")}function y(){document.querySelector(".loader").classList.add("hidden")}const b=new C,M=document.querySelector(".my_title_category");function A(t){const o=document.querySelector(".list-category-books");t.forEach(e=>{const s=`
+import{N as C,a as B,b as E,c as q,d as T}from"./header-mobile-menu-58e15c64.js";function f(){document.querySelector(".loader").classList.remove("hidden")}function y(){document.querySelector(".loader").classList.add("hidden")}const b=new C,M=document.querySelector(".my_title_category");function A(t){const o=document.querySelector(".list-category-books");t.forEach(e=>{const s=`
       <li class="list__category">${e.list_name}</li>
     `;o.insertAdjacentHTML("beforeend",s)})}function O(t){const o=document.querySelector(".books-container");let e=0;t.forEach(s=>{s.books.length!==e&&(e=s.books.length,M.insertAdjacentHTML("beforeend",`<h1 class="my_title">
       Best Sellers <span class="my_title_books">Books</span>
