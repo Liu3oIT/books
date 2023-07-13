@@ -1,4 +1,4 @@
-import{a as p,b as d,c as g,N as h}from"./header-mobile-menu-bef24127.js";const m=new h,e=document.querySelector(".shop-list"),a=document.querySelector(".shop-background");console.log(a);const k=async s=>{for(const t of s){const o=await m.fetchBooksForId(t);Array.isArray(o)?o.forEach(i=>{l(i)}):l(o)}},l=s=>{a.innerHTML="";const t=`
+import{a as p,b as d,c as g,N as h}from"./header-mobile-menu-b932d82e.js";const m=new h,e=document.querySelector(".shop-list"),a=document.querySelector(".shop-background");console.log(a);const k=async s=>{for(const t of s){const o=await m.fetchBooksForId(t);Array.isArray(o)?o.forEach(i=>{l(i)}):l(o)}},l=s=>{a.innerHTML="";const t=`
     <li class="shopping-list-item" data-id="${s._id}">
       <img class="sh-book-img" src="${s.book_image}" alt="Boook image" loading="lazy"></img>
       <div class="sh-wrap">
