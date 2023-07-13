@@ -3,10 +3,14 @@
   font-size: 32px;
   line-height: 1.19;
   letter-spacing: -1.28px;
-  @media (max-width: 375px) {
+}
+@media screen and (max-width: 375px) {
+  .sh-title {
     font-size: 7.7vw;
   }
-  @media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 768px) {
+  .sh-title {
     font-size: 48px;
     line-height: 1.08;
     letter-spacing: -1.92px;
@@ -21,23 +25,26 @@
 
 .empty-sh-list {
   display: none;
-  @media screen and (min-width: 1440px) {
+}
+@media screen and (min-width: 1440px) {
+  .empty-sh-list {
     margin-top: 140px;
   }
 }
 .book-column-img {
   margin: 0 auto;
   width: 265px;
-  @media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 768px) {
+  .book-column-img {
     width: 322px;
   }
 }
-
 .main-sh-list {
   width: 100%;
 }
 
-.shopping-list {
+.shop-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -53,16 +60,22 @@
   padding: 14px;
   border-radius: 16px;
   border: 2px solid rgba(79, 46, 232, 0.4);
-  background-color: var(--header);
-  width: 335px;
-
-  @media screen and (min-width: 768px) {
+  background-color: var(--body-secondary-color);
+  width: 374px;
+}
+@media screen and (min-width: 768px) {
+  .shopping-list-item {
     position: relative;
     display: flex;
     padding: 30px 24px;
+    width: 705px;
   }
 }
-
+@media screen and (min-width: 1440px) {
+  .shopping-list-item {
+    width: 995px;
+  }
+}
 .sh-book-title {
   margin-bottom: 4px;
   color: var(--text-main);
@@ -70,10 +83,15 @@
 
   line-height: 1.13;
   letter-spacing: -0.64px;
-  @media screen and (min-width: 375px) {
+}
+@media screen and (min-width: 375px) {
+  .sh-book-title {
+    margin-top: 0px;
     font-size: 16px;
   }
-  @media screen and (min-width: 767px) {
+}
+@media screen and (min-width: 767px) {
+  .sh-book-title {
     line-height: 1.17;
   }
 }
@@ -84,6 +102,11 @@
   font-weight: 400;
   line-height: 1.17;
   letter-spacing: 0.36px;
+}
+@media screen and (min-width: 375px) {
+  .sh-book-category {
+    margin-top: 0px;
+  }
 }
 
 .div-text-container {
@@ -102,6 +125,13 @@
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
 }
+@media screen and (max-width: 375px) {
+  .sh-book-description {
+    margin-top: 0px;
+    width: 193px;
+    height: 63px;
+  }
+}
 .sh-book-author {
   color: var(--text-second);
   font-size: 12px;
@@ -110,11 +140,16 @@
   line-height: 1.17;
   letter-spacing: -0.48px;
 }
+@media screen and (min-width: 375px) {
+  .sh-book-author {
+    margin-right: 4px;
+  }
+}
 
 .shopping-links {
   display: flex;
   align-items: center;
-  gap: 8;
+  gap: 8px;
 }
 
 .sh-book-img {
@@ -122,20 +157,23 @@
   width: 100px;
   height: 142px;
   border-radius: 8px;
-  @media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 768px) {
+  .sh-book-img {
     margin-right: 24px;
     width: 116px;
     height: 165px;
   }
 }
-
 .book-stores {
   filter: saturate(0%);
 }
 
 .amazon-store {
   width: 32px;
-  @media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 768px) {
+  .amazon-store {
     width: 48px;
   }
 }
@@ -145,14 +183,18 @@
 
 .book-shop {
   width: 16px;
-  @media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 768px) {
+  .book-shop {
     width: 32px;
   }
 }
 
 .apple-store {
   width: 16px;
-  @media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 768px) {
+  .apple-store {
     width: 28px;
   }
 }
@@ -162,12 +204,13 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  @media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 768px) {
+  .sh-wrap {
     justify-content: space-between;
     width: 100%;
   }
 }
-
 .js-dark-mode-amazon {
   filter: brightness(0) invert(1);
 }
@@ -194,12 +237,13 @@
   justify-content: center;
   padding: 0;
 
-  background-color: var(--color-accent);
+  background-color: var(--text-fourth-color);
   border-radius: 50%;
   border: none;
   cursor: pointer;
-
-  @media screen and (min-width: 375px) {
+}
+@media screen and (min-width: 375px) {
+  .sh-list-delete-btn {
     bottom: 68%;
     left: 93%;
     margin-left: 0;
@@ -208,8 +252,10 @@
     height: 34px;
     transform: translate(-50%, -50%);
   }
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .sh-list-delete-btn {
     bottom: 72%;
     left: 95%;
     margin-left: 0;
@@ -218,8 +264,10 @@
     height: 34px;
     transform: translate(-50%, -50%);
   }
+}
 
-  @media screen and (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
+  .sh-list-delete-btn {
     bottom: 68%;
     left: 96%;
   }
@@ -251,15 +299,21 @@
   font-weight: 400;
   line-height: 18px;
   letter-spacing: -0.28px;
-
-  @media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 768px) {
+  .empty-sh-list-text {
     width: 349px;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: -0.36px;
   }
 }
-
+@media screen and (min-width: 375) {
+  .store-link-img {
+    width: 50px;
+    height: 50px;
+  }
+}
 /* .shop-list {
   flex-direction: column;
   gap: 20px;
@@ -288,7 +342,6 @@
   display: flex;
   position: relative;
 } */
-
 
 /* .sh-book-img {
   width: 116px;
