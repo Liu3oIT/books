@@ -31,10 +31,10 @@ import{a as p,b as d,c as h,N as g}from"./backdrop-heart-a53f0600.js";const m=ne
       <div class="shop-img-backgr">
         <img
           srcset="
-            ./img/images/shopping-list-empty/shoplist-tabl@1x.png 1x,
-            ./img/images/shopping-list-empty/shoplist-tabl@2x.png 2x
+            /img/images/shopping-list-empty/shoplist-tabl@1x.png 1x,
+            /img/images/shopping-list-empty/shoplist-tabl@2x.png 2x
           "
-          src="./img/images/shopping-list-empty/shoplist-tabl@1x.png"
+          src="/img/images/shopping-list-empty/shoplist-tabl@1x.png"
           alt="stack of books"
         />
       </div>
