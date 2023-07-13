@@ -102,7 +102,7 @@ function markapForMoreBooks(res, target) {
   booksContainer.classList.add('new-books');
   extractedItems.forEach(category => {
     const titleCategory = `
-      <li>
+      <li class="section-books-item">
         <div data-id="${category._id}">
           <div class="card-book">
             <img class="books-card-img" src="${category.book_image}" alt="${category.title}" width="180" height="256" loading="lazy">
