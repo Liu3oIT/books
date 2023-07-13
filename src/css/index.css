@@ -23,7 +23,7 @@
 
   --text-secondary-color: #111111;
 
-  --text-gray: #B4AFAF;
+  --text-gray: #b4afaf;
 
   --text-fourth-color: #4f2ee8;
   --yellow-accent-color: #eac645;
@@ -63,8 +63,6 @@ img {
 .container {
   position: relative;
   max-width: 375px;
-  padding-left: 20px;
-  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
 }
