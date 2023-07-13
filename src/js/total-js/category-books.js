@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { topBooks } from './listBooks';
-import {showLoader,hideLoader} from './loader';
+import { showLoader, hideLoader } from './loader';
+import { debounce } from 'lodash';
 const list = document.querySelector('.books-container');
 const title = document.querySelector('.my_title_category');
 
@@ -65,7 +66,7 @@ function markupCategoryList(response) {
   });
 }
 
-const listBookOneCategory = async event => {
+const listBookOneCategory = debounce(async event => {
   list.innerHTML = '';
   title.innerHTML = '';
   const target = event.target;
@@ -83,7 +84,7 @@ const listBookOneCategory = async event => {
   });
 
   target.setAttribute('selected', 'true');
-};
+}, 1000);
 
 const moreBooksFromCategory = async event => {
   // showLoader()
