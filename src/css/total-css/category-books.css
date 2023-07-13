@@ -141,7 +141,7 @@
   }
 }
 
-.section-books-item:nth-child(n + 2) {
+/* .section-books-item:nth-child(n + 2) {
   display: none;
 }
 
@@ -152,7 +152,7 @@
   .section-books-item:nth-child(n + 4) {
     display: none;
   }
-}
+} */
 
 @media screen and (min-width: 1440px) {
   .section-books-item:nth-child(n + 2) {
