@@ -95,14 +95,21 @@ function onBtnCloseClick(e) {
     backDrop.classList.add('is-hidden');
   }
 
-  if (e.target.classList.contains('modal__close-img')) {
+  if (e.target.classList.contains('popup-fade')) {
     backDrop.classList.add('is-hidden');
   }
+
+    if (e.target.classList.contains('modal__close-img')) {
+      backDrop.classList.add('is-hidden');
+  }
+  showScroll();
   checkModalState();
 }
 
+
+
 function onCardClick(e) {
-  if (e.target.tagName !== 'IMG') {
+  if (!e.target.closest('.section-books-item')) {
     return;
   }
   const card = e.target;
@@ -118,6 +125,11 @@ function onCardClick(e) {
   getCategory(id);
   backDrop.classList.remove('is-hidden');
   checkBookId();
+
+  const backDropclassList = Array.from(backDrop.classList);
+  if (!backDropclassList.includes('is-hidden')) {
+    closeScroll();
+  }
 }
 
 function onAddBookClick(res) {
@@ -133,7 +145,7 @@ function onAddBookClick(res) {
       addToLocalStorage();
     }
   }
-  
+
   if (removeNotification.classList.contains('hidden')) {
     const index = currentBooks.indexOf(idToLocaleStorage);
     if (index !== -1) {
@@ -147,8 +159,16 @@ updateCurrentBooks();
 
 
 
+const html = document.documentElement;
 
 
+function closeScroll() {
+  html.style.overflow = 'hidden'
+}
+
+function showScroll() {
+  html.style.overflow = 'auto'
+}
 
 
 

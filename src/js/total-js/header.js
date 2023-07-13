@@ -12,7 +12,7 @@ if (checkBoxEl) {
 savedThemeOnReloaded(body, checkBoxEl);
 
 const currentActivePage = document.querySelector('.current');
-const newActivePage = document.querySelector(`[href='.${window.location.pathname}'][data-nav]`);
+const newActivePage = document.querySelector(`a[data-page='${body.dataset.page}']`);
 
 if (currentActivePage != newActivePage) {
     currentActivePage.classList.toggle("current");

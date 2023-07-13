@@ -1,14 +1,14 @@
  export function showLoader() {
   const loaderOverlay = document.querySelector('.loader');
-
-  loaderOverlay.classList.remove('hidden');
+  // loaderOverlay.style.display = 'block';
+  loaderOverlay.classList.remove('hidden-x');
 
 
 }
  export function hideLoader() {
   const loaderOverlay = document.querySelector('.loader');
-
-  loaderOverlay.classList.add('hidden');
+  // loaderOverlay.style.display = 'none';
+  loaderOverlay.classList.add('hidden-x');
 
 
 }

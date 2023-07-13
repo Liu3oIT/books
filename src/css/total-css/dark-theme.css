@@ -53,28 +53,22 @@ body.dark-theme .checkbox {
   );
   box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
-
-body.dark-theme .close-menu-btn {
-  color: var(--body-background-color);
-  background-color: var(--body-background-color);
-}
-
-body.dark-theme .close-menu-icon,
-body.dark-theme .burger-meny-icon {
+body.dark-theme .burger-menu-icon {
   stroke: var(--body-background-color);
 }
-
-
+body.dark-theme .close-menu-icon {
+  stroke: var(--body-background-color);
+}
 body.dark-theme .list-category-books {
-  color: var( --body-secondary-color);
+  color: var(--body-secondary-color);
 }
 
 body.dark-theme .list-category-books li:hover {
- color:var(--yellow-accent-color);
+  color: var(--yellow-accent-color);
 }
 
 body.dark-theme .list__category[selected='true'] {
-  color:var(--yellow-accent-color);
+  color: var(--yellow-accent-color);
 }
 
 body.dark-theme .my_title {
@@ -87,4 +81,69 @@ body.dark-theme .title-books {
 
 body.dark-theme .books-btn {
   color: var(--body-secondary-color);
+}
+
+body.dark-theme .shop-title {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .sub-title {
+  color: var(--text-fourth-color);
+}
+
+body.dark-theme .shop-text-backgr {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Footer */
+
+body.dark-theme .footer_text_left {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .footer_text_right {
+  color: var(--body-secondary-color);
+}
+
+/* Modal Okno */
+body.dark-theme .an-book-info-modal {
+  background-color: var(--text-secondary-color);
+}
+
+body.dark-theme .modal__close-btn {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .modal__title {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .modal__book-desc {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .modal__add-notification {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .modal__notification {
+  color:  rgba(255, 255, 255, 0.5);
+}
+
+/* Shoping list */
+
+body.dark-theme .sh-book-title {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .sh-book-category {
+  color: var(--text-gray);
+}
+
+body.dark-theme .sh-book-description {
+  color: var(--body-secondary-color);
+}
+
+body.dark-theme .sh-book-author {
+  color: var(--text-gray);
 }

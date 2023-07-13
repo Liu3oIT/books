@@ -130,7 +130,7 @@ display: none;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10000;
-  display: none;
+
 }
 .loader::before , .loader::after {
   content: "";
@@ -157,3 +157,6 @@ display: none;
     50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
     75%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
 }
+.hidden-x{
+  display: none;
+} 

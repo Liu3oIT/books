@@ -1,11 +1,11 @@
 import axios from 'axios';
 import { topBooks } from './listBooks';
-
+import {showLoader,hideLoader} from './loader';
 const list = document.querySelector('.books-container');
 const title = document.querySelector('.my_title_category');
 
 export async function fetchHits(category) {
-
+showLoader()
   const BASE_URL = 'https://books-backend.p.goit.global/books/category';
   try {
     const response = await axios.get(BASE_URL, {
@@ -22,6 +22,9 @@ export async function fetchHits(category) {
     return response.data;
   } catch (error) {
     throw new Error(`Request failed: ${error.message}`);
+  }
+  finally{
+    hideLoader()
   }
 }
 
@@ -80,6 +83,7 @@ const listBookOneCategory = async event => {
 };
 
 const moreBooksFromCategory = async event => {
+
   const target = event.target;
   if (target.tagName !== 'BUTTON') {
     return;
@@ -92,6 +96,9 @@ const moreBooksFromCategory = async event => {
     target.style.display = 'none';
   } catch (error) {
     console.error('Error:', error);
+  }
+  finally{
+    hideLoader()
   }
 };
 
