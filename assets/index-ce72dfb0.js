@@ -56,7 +56,7 @@ import{N as C,a as B,b as E,c as q,d as T}from"./header-mobile-menu-bef24127.js"
       </div>
        </li>
     `;h.insertAdjacentHTML("beforeend",s)})}const W=async t=>{h.innerHTML="",w.innerHTML="";const o=t.target;if(o.tagName!=="LI")return;const e=o.textContent;await S(e),document.querySelectorAll(".list__category").forEach(i=>{i.removeAttribute("selected")}),o.setAttribute("selected","true")},X=async t=>{const o=t.target;if(o.tagName!=="BUTTON")return;const s=o.closest("[data-category]").dataset.category;try{const i=await tt(s);Z(i,o),o.style.display="none"}catch(i){console.error("Error:",i)}};function Z(t,o){const s=t.splice(5),i=document.createElement("div");i.classList.add("new-books"),s.forEach(l=>{const $=`
-      <li>
+      <li class="section-books-item">
         <div data-id="${l._id}">
           <div class="card-book">
             <img class="books-card-img" src="${l.book_image}" alt="${l.title}" width="180" height="256" loading="lazy">
