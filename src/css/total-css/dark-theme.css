@@ -147,3 +147,6 @@ body.dark-theme .sh-book-description {
 body.dark-theme .sh-book-author {
   color: var(--text-gray);
 }
+body.dark-theme .shopping-list-item {
+  background-color: var(--text-secondary-color);
+}
