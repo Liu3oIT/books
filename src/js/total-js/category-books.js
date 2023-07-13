@@ -42,8 +42,11 @@ function markupCategoryList(response) {
         <div class="section-books">       
               <div  data-id="${category._id}">
                   <div class="card-book">
-                  <img class="books-card-img" src="${category.book_image}" alt="${category.title}" width="180" height="256" loading="lazy">             
-                </div>
+                  <img class="books-card-img" src="${category.book_image}" alt="${category.title}" width="180" height="256" loading="lazy">   
+                    <div class="overflow-books">
+                      <p class="overflow-books-text">quick view</p>
+                    </div>          
+                  </div>
                 <div class="info-books">
                   <h3 class="title-books">${category.title}</h3>
                   <p class="name-author">${category.author}</p>
