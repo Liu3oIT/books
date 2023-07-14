@@ -1,6 +1,5 @@
 body.dark-theme {
   background-color: var(--body-dark-theme-color);
-  color: var(--);
   transition: background-color 300ms ease-in;
 }
 
@@ -127,7 +126,7 @@ body.dark-theme .modal__add-notification {
 }
 
 body.dark-theme .modal__notification {
-  color:  rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 /* Shoping list */
@@ -149,4 +148,13 @@ body.dark-theme .sh-book-author {
 }
 body.dark-theme .shopping-list-item {
   background-color: var(--text-secondary-color);
+}
+body.dark-theme .amazon-store,
+body.dark-theme .amazon-img {
+  filter: brightness(0) invert();
+  
+}
+body.dark-theme .apple-store,
+body.dark-theme .book-shop {
+filter: grayscale(100%);
 }
