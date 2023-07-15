@@ -13,3 +13,4 @@ import './total-js/loader';
 import './total-js/header-mobile-menu';
 import './total-js/pagination-books';
 import './total-js/backdrop-heart';
+import './total-js/counter.js';
