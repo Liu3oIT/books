@@ -1,4 +1,4 @@
-import{a as p,b as d,c as h,N as g}from"./backdrop-heart-6a045fff.js";const m=new g,e=document.querySelector(".shop-list"),a=document.querySelector(".shop-background");console.log(a);const k=async s=>{for(const o of s){const t=await m.fetchBooksForId(o);Array.isArray(t)?t.forEach(i=>{l(i)}):l(t)}},l=s=>{a.innerHTML="";const o=`
+import{a as p,b as d,c as h,u as g,N as m}from"./backdrop-heart-c3928baa.js";const k=new m,e=document.querySelector(".shop-list"),a=document.querySelector(".shop-background");console.log(a);const u=async s=>{for(const o of s){const t=await k.fetchBooksForId(o);Array.isArray(t)?t.forEach(i=>{l(i)}):l(t)}},l=s=>{a.innerHTML="";const o=`
     <li class="shopping-list-item" data-id="${s._id}">
       <img class="sh-book-img" src="${s.book_image}" alt="Boook image" loading="lazy"></img>
       <div class="sh-wrap">
@@ -23,7 +23,7 @@ import{a as p,b as d,c as h,N as g}from"./backdrop-heart-6a045fff.js";const m=ne
           <path d="M7.25 1.75h5.5m-11 2.75h16.5m-1.833 0-.643 9.643c-.097 1.446-.145 2.17-.457 2.718a2.75 2.75 0 0 1-1.19 1.114c-.569.275-1.293.275-2.743.275H8.616c-1.45 0-2.174 0-2.743-.275a2.75 2.75 0 0 1-1.19-1.114c-.312-.548-.36-1.272-.457-2.718L3.583 4.5m4.584 4.125v4.583m3.666-4.583v4.583" />
         </svg>
       </button>
-    </li>`;e.insertAdjacentHTML("beforeend",o)},n=()=>{e.innerHTML="";const s=localStorage.getItem("shopping-list"),o=JSON.parse(s);if(o&&o.length>0)k(o);else{const t=`
+    </li>`;e.insertAdjacentHTML("beforeend",o)},n=()=>{e.innerHTML="";const s=localStorage.getItem("shopping-list"),o=JSON.parse(s);if(o&&o.length>0)u(o);else{const t=`
       <p class="shop-text-backgr">
         This page is empty, add some books and proceed to order.
       </p>
@@ -38,4 +38,4 @@ import{a as p,b as d,c as h,N as g}from"./backdrop-heart-6a045fff.js";const m=ne
           alt="stack of books"
         />
       </div>
-    `;a.innerHTML=t}},b=s=>{const o=localStorage.getItem("shopping-list"),i=JSON.parse(o).filter(r=>r!==s),c=JSON.stringify(i);localStorage.setItem("shopping-list",c),i.length===0&&n()},u=s=>{const o=s.target;if(!o.closest(".sh-list-delete-btn"))return;const t=o.closest("[data-id]"),i=t.dataset.id;b(i),t.remove()};e.addEventListener("click",u);n();
+    `;a.innerHTML=t}},b=s=>{const o=localStorage.getItem("shopping-list"),i=JSON.parse(o).filter(r=>r!==s),c=JSON.stringify(i);localStorage.setItem("shopping-list",c),g(),i.length===0&&n()},f=s=>{const o=s.target;if(!o.closest(".sh-list-delete-btn"))return;const t=o.closest("[data-id]"),i=t.dataset.id;b(i),t.remove()};e.addEventListener("click",f);n();

@@ -11,9 +11,9 @@
     />
     
     
-    <script type="module" crossorigin src="/books/assets/shop-list-di-5df841d0.js"></script>
-    <link rel="modulepreload" crossorigin href="/books/assets/backdrop-heart-6a045fff.js">
-    <link rel="stylesheet" href="/books/assets/backdrop-heart-e7c4147e.css">
+    <script type="module" crossorigin src="/books/assets/shop-list-di-eb01d3e9.js"></script>
+    <link rel="modulepreload" crossorigin href="/books/assets/backdrop-heart-c3928baa.js">
+    <link rel="stylesheet" href="/books/assets/backdrop-heart-2d0f6529.css">
     <link rel="stylesheet" href="/books/assets/shop-list-di-3daab091.css">
   </head>
   <body data-page="shop-list">
@@ -56,6 +56,7 @@
           <svg class="list-btn-svg fill" width="20" height="20">
             <use href="/books/assets/icons-ca45e530.svg#shop-list-icon"></use>
           </svg>
+          <p class="counter-value"></p>
         </a>
       </li>
     </ul>
@@ -92,27 +93,40 @@
     </button>
   </div>
   <div class="header-mobile-menu">
-        <button class="header-mobile-authorisation-btn">
-        Sign up
-        <svg class="mobile-arr-icon-yellow" width="17" height="12">
-            <path stroke="#EAC645" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M1.333 6h13.334m0 0-5-5m5 5-5 5" />
+  <button class="header-mobile-authorisation-btn">
+    Sign up
+    <svg class="mobile-arr-icon-yellow" width="17" height="12">
+      <path
+        stroke="#EAC645"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M1.333 6h13.334m0 0-5-5m5 5-5 5"
+      />
+    </svg>
+  </button>
+  <div class="btn-mobile-container">
+    <button class="header-mobile-home-btn">
+      <a class="header-mobile-home-link current" data-page="home" href="./index.html"
+        >Home</a
+      >
+    </button>
+    <button class="header-mobile-list-btn">
+      <a
+        href="./shop-list-di.html"
+        class="header-mobile-list-link"
+        data-page="shop-list"
+      >
+        Shopping list
+        <svg class="mobile-list-btn-svg current" width="35" height="35">
+          <use href="/books/assets/icons-ca45e530.svg#shop-list-icon"></use>
         </svg>
-        </button>
-        <div class="btn-mobile-container">
-        <button class="header-mobile-home-btn">
-            <a class="header-mobile-home-link" href="./index.html">HOME</a>
-        </button>
-        <button class="header-mobile-list-btn">
-            <a href="./shop-list-di.html" class="header-mobile-list-link">
-                Shopping list
-                <svg class="mobile-list-btn-svg" width="35" height="35">
-                    <use href="/books/assets/icons-ca45e530.svg#shop-list-icon"></use>
-                </svg>
-            </a>
-        </button>
-        </div>
+        <p class="counter-value"></p>
+      </a>
+    </button>
+  </div>
 </div>
+
 </section>
 
   </header>
