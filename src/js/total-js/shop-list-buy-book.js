@@ -2,6 +2,7 @@ import NewApiService from './API';
 import amazon from '../../img/amazon.svg';
 import applebook from '../../img/book-apple.svg';
 import bookshop from '../../img/book-shop.svg';
+import updateShopingListCounter from './counter';
 
 const newApiService = new NewApiService();
 const listShopBuy = document.querySelector('.shop-list');
@@ -92,6 +93,8 @@ const deleteBookFromLocalStorage = id => {
 
   localStorage.setItem('shopping-list', updatedIdsJSON);
 
+  updateShopingListCounter();
+  
   if (updatedIds.length === 0) {
     updateShopList();
   }

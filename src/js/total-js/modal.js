@@ -1,6 +1,7 @@
 import amazon from '../../img/amazon.svg';
 import applebook from '../../img/book-apple.svg';
 import bookshop from '../../img/book-shop.svg';
+import updateShopingListCounter from './counter';
 
 const backDrop = document.querySelector('#book-modal');
 const bestSellerRef = document.querySelector('.books-container');
@@ -79,10 +80,12 @@ function updateCurrentBooks() {
 
 function addToLocalStorage() {
   localStorage.setItem('shopping-list', JSON.stringify(currentBooks));
+  updateShopingListCounter();
 }
 
 function removeFromLocalStorage() {
   localStorage.setItem('shopping-list', JSON.stringify(currentBooks));
+  updateShopingListCounter();
 }
 
 function onBtnCloseClick(e) {

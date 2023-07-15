@@ -1,4 +1,5 @@
 import { savedThemeOnReloaded, onCheckboxClickHandler } from './dayNight';
+import updateShopingListCounter from './counter';
 
 const checkBoxEl = document.querySelector('#checkbox');
 const body = document.querySelector('body');
@@ -18,3 +19,4 @@ if (currentActivePage != newActivePage) {
     currentActivePage.classList.toggle("current");
     newActivePage.classList.toggle("current");
 }
+updateShopingListCounter();
