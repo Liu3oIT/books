@@ -1,5 +1,6 @@
 import { savedThemeOnReloaded, onCheckboxClickHandler } from './dayNight';
 import updateShopingListCounter from './counter';
+import { forEach } from 'lodash';
 
 const checkBoxEl = document.querySelector('#checkbox');
 const body = document.querySelector('body');
@@ -12,11 +13,22 @@ if (checkBoxEl) {
 
 savedThemeOnReloaded(body, checkBoxEl);
 
-const currentActivePage = document.querySelector('.current');
-const newActivePage = document.querySelector(`a[data-page='${body.dataset.page}']`);
+const currentActivePages = document.querySelectorAll('.current');
+const newActivePages = document.querySelectorAll(`a[data-page='${body.dataset.page}']`);
 
-if (currentActivePage != newActivePage) {
-    currentActivePage.classList.toggle("current");
-    newActivePage.classList.toggle("current");
+currentActivePages.forEach((currentPage) => {
+  newActivePages.forEach((newActivePage) => {
+   if (currentPage.dataset.page != newActivePage.dataset.page) {
+    currentPage.classList.remove("current");
+     setCurrent(newActivePage);
 }
+  });
+});
+
+function setCurrent(el) {
+  if (!el.classList.contains('current')) {
+    el.classList.add('current');
+  }
+}
+
 updateShopingListCounter();
