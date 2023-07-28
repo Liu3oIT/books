@@ -24,7 +24,7 @@ const getIdlocalStore = async ids => {
 };
 
 const processBook = book => {
-  shopDiv.innerHTML = '';
+  shopDiv.style.display = 'none';
   const booksForShop = `
     <li class="shopping-list-item" data-id="${book._id}">
       <img class="sh-book-img" src="${book.book_image}" alt="Boook image" loading="lazy"></img>
@@ -63,24 +63,6 @@ const updateShopList = () => {
 
   if (ids && ids.length > 0) {
     getIdlocalStore(ids);
-  } else {
-    const emptyShopMarkup = `
-      <p class="shop-text-backgr">
-        This page is empty, add some books and proceed to order.
-      </p>
-
-      <div class="shop-img-backgr">
-        <img
-          srcset="
-            ../img/images/shopping-list-empty/shoplist-tabl@1x.png 1x,
-            ../img/images/shopping-list-empty/shoplist-tabl@2x.png 2x
-          "
-          src="../img/images/shopping-list-empty/shoplist-tabl@1x.png"
-          alt="stack of books"
-        />
-      </div>
-    `;
-    shopDiv.innerHTML = emptyShopMarkup;
   }
 };
 
@@ -94,8 +76,9 @@ const deleteBookFromLocalStorage = id => {
   localStorage.setItem('shopping-list', updatedIdsJSON);
 
   updateShopingListCounter();
-  
+
   if (updatedIds.length === 0) {
+    shopDiv.style.display = 'block';
     updateShopList();
   }
 };
